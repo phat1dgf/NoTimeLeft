@@ -34,7 +34,10 @@ public class VehicleMoving : M_MonoBehaviour
     private void Moving()
     {
         if (InputManager.Instance.IsMoving)
+        { 
             this._movement.x = Input.GetAxisRaw("Horizontal");
+            this._movement.y = Input.GetAxisRaw("Vertical");
+        }
         else
             this._movement = Vector2.zero;
 
