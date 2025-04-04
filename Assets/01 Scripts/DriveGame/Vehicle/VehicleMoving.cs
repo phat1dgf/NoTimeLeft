@@ -7,7 +7,7 @@ public class VehicleMoving : M_MonoBehaviour
 {
     [SerializeField] private Rigidbody2D _rigid;
     [SerializeField] private Vector2 _movement;
-    [SerializeField] private float _speed;
+    [SerializeField] private float _speedHorizontal, _speedForward, _speedBack, speedX;
     protected override void LoadComponents()
     {
         base.LoadComponents();
@@ -24,7 +24,9 @@ public class VehicleMoving : M_MonoBehaviour
         base.Reset();
         this._rigid.freezeRotation = true;
         this._rigid.gravityScale = 0f;
-        this._speed = 5;
+        this._speedHorizontal = 5;
+        this._speedBack = 6.5f;
+        this._speedForward = 3.5f;
     }
     private void Update()
     {
@@ -41,6 +43,11 @@ public class VehicleMoving : M_MonoBehaviour
         else
             this._movement = Vector2.zero;
 
-        this._rigid.velocity = this._movement * this._speed;
+        speedX = (this._movement.x > 0) ? this._speedForward : this._speedBack;
+
+        this._rigid.velocity = new Vector2(
+            this._movement.x * speedX,
+            this._movement.y * this._speedHorizontal
+        );
     }
 }
