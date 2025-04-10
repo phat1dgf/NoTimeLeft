@@ -35,7 +35,8 @@ public class ContextManager : MonoBehaviour
             {
                 contextId = data.contextId,
                 contextText = data.contextText,
-                themeImage = data.themeImage
+                themeImage = data.themeImage,
+                canvasType = data.canvasType
             };
 
             foreach (var opt in data.options)

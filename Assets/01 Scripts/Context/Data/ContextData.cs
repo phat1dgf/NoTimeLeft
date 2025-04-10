@@ -8,4 +8,11 @@ public class ContextData
     [TextArea(3, 10)] public string contextText;
     public Sprite themeImage;
     public List<ContextOptionData> options;
+    public CanvasType canvasType;
+    public enum CanvasType
+    {
+        Main,
+        Map
+    }
+
 }
