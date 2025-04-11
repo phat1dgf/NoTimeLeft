@@ -12,4 +12,245 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34f2389b31ea43f46a5a6a8c28ceeefd, type: 3}
   m_Name: ContextDatabase
   m_EditorClassIdentifier: 
-  contexts: []
+  contexts:
+  - contextId: intro1
+    contextText: 'You wake up in your room. Head pounding. Phone dead. TV static.
+      Weird smell.
+
+
+      You check the date.'
+    themeImage: {fileID: 0}
+    options: []
+    canvasType: 0
+  - contextId: intro2
+    contextText: 'Two months.
+
+
+      You''ve somehow slept through the end of the
+      world.
+
+
+      Maybe it was the noise-canceling headphones. Maybe it was the
+      blackout curtains. Maybe you really needed that nap. Whatever the reason, while
+      the rest of the world was fighting off a zombie apocalypse, you were dreaming
+      about pizza and Netflix.'
+    themeImage: {fileID: 0}
+    options: []
+    canvasType: 0
+  - contextId: intro3
+    contextText: "Now you're the last one in a city crawling with the undead\u2014your
+      fridge is empty, your neighbors are moaning (and not in the fun way), and your
+      building is starting to smell real funky.\n\nGood news? You just picked up
+      a radio signal."
+    themeImage: {fileID: 0}
+    options: []
+    canvasType: 0
+  - contextId: intro4
+    contextText: "\u201CThis is Vault 104. We\u2019ve got food, safety, and no zombies.
+      Evac closes in 7 days. Get here or get eaten. Over.\u201D"
+    themeImage: {fileID: 0}
+    options: []
+    canvasType: 0
+  - contextId: intro5
+    contextText: "Bad news? It\u2019s on the other side of the map.\n\nYou grab your
+      trusty frying pan (don't ask), zip up your hoodie, and step into the apocalypse
+      like it\u2019s just another Monday."
+    themeImage: {fileID: 0}
+    options: []
+    canvasType: 0
+  - contextId: intro6
+    contextText: "The clock is ticking. The zombies are hungry. And you really need
+      a shower.\n\nLet\u2019s go."
+    themeImage: {fileID: 0}
+    options: []
+    canvasType: 0
+  - contextId: intro7
+    contextText: "But before you bolt out the door, you\u2019ve got just a few minutes
+      to scavenge your apartment. Food? Flashlight? That one sock you always lose?\n\nChoose
+      wisely\u2014whatever you grab now could mean the difference between survival\u2026
+      and snack time (for them)."
+    themeImage: {fileID: 0}
+    options: []
+    canvasType: 0
+  - contextId: home
+    contextText: Check room
+    themeImage: {fileID: 0}
+    options:
+    - text: Bedroom
+      nextContextId: bedroom
+      endsContext: 0
+      actionId: 0
+    - text: Living room
+      nextContextId: livingroom
+      endsContext: 0
+      actionId: 0
+    - text: Kitchen
+      nextContextId: kitchen
+      endsContext: 0
+      actionId: 0
+    - text: Backyard
+      nextContextId: backyard
+      endsContext: 0
+      actionId: 0
+    - text: Garage
+      nextContextId: garage
+      endsContext: 0
+      actionId: 0
+    canvasType: 0
+  - contextId: bedroom
+    contextText: Choice
+    themeImage: {fileID: 0}
+    options:
+    - text: Water Bottle
+      nextContextId: 
+      endsContext: 0
+      actionId: 0
+    - text: Candy
+      nextContextId: 
+      endsContext: 0
+      actionId: 0
+    canvasType: 1
+  - contextId: livingroom
+    contextText: Choice
+    themeImage: {fileID: 0}
+    options:
+    - text: Hamburger
+      nextContextId: 
+      endsContext: 0
+      actionId: 0
+    - text: Energy Drink
+      nextContextId: 
+      endsContext: 0
+      actionId: 0
+    canvasType: 1
+  - contextId: kitchen
+    contextText: Choice
+    themeImage: {fileID: 0}
+    options:
+    - text: Water Bottle
+      nextContextId: 
+      endsContext: 0
+      actionId: 0
+    - text: Hamburger
+      nextContextId: 
+      endsContext: 0
+      actionId: 0
+    - text: Energy bar
+      nextContextId: 
+      endsContext: 0
+      actionId: 0
+    canvasType: 1
+  - contextId: backyard
+    contextText: Choice
+    themeImage: {fileID: 0}
+    options:
+    - text: Hamburger
+      nextContextId: 
+      endsContext: 0
+      actionId: 0
+    canvasType: 1
+  - contextId: garage
+    contextText: Choice
+    themeImage: {fileID: 0}
+    options:
+    - text: Let's go
+      nextContextId: 
+      endsContext: 0
+      actionId: 0
+    canvasType: 1
+  - contextId: gas_station1
+    contextText: Check room
+    themeImage: {fileID: 0}
+    options:
+    - text: Go
+      nextContextId: go
+      endsContext: 0
+      actionId: 0
+    - text: Refuel
+      nextContextId: refuel
+      endsContext: 0
+      actionId: 0
+    - text: Explore
+      nextContextId: explore
+      endsContext: 0
+      actionId: 0
+    - text: Open inventory
+      nextContextId: inventory
+      endsContext: 0
+      actionId: 0
+    - text: Sleep
+      nextContextId: sleep
+      endsContext: 0
+      actionId: 0
+    canvasType: 0
+  - contextId: super_market
+    contextText: Check room
+    themeImage: {fileID: 0}
+    options:
+    - text: Go
+      nextContextId: go
+      endsContext: 0
+      actionId: 0
+    - text: Explore
+      nextContextId: explore
+      endsContext: 0
+      actionId: 0
+    - text: Open inventory
+      nextContextId: inventory
+      endsContext: 0
+      actionId: 0
+    - text: Sleep
+      nextContextId: sleep
+      endsContext: 0
+      actionId: 0
+    canvasType: 0
+  - contextId: gas_station2
+    contextText: Check room
+    themeImage: {fileID: 0}
+    options:
+    - text: Go
+      nextContextId: go
+      endsContext: 0
+      actionId: 0
+    - text: Refuel
+      nextContextId: refuel
+      endsContext: 0
+      actionId: 0
+    - text: Explore
+      nextContextId: explore
+      endsContext: 0
+      actionId: 0
+    - text: Open inventory
+      nextContextId: inventory
+      endsContext: 0
+      actionId: 0
+    - text: Sleep
+      nextContextId: sleep
+      endsContext: 0
+      actionId: 0
+    canvasType: 0
+  - contextId: ending1
+    contextText: Congrate! You made it to the vault.
+    themeImage: {fileID: 0}
+    options: []
+    canvasType: 0
+  - contextId: ending2
+    contextText: No one was there to greet you.
+    themeImage: {fileID: 0}
+    options: []
+    canvasType: 0
+  - contextId: ending3
+    contextText: "The steel door creaked open\u2014revealing a dark tunnel with no
+      end in sight.\n\nYou stepped inside, not knowing what awaits."
+    themeImage: {fileID: 0}
+    options: []
+    canvasType: 0
+  - contextId: ending4
+    contextText: 'The door closed behind you, sealing your journey with what felt
+      like a Happy ending.
+
+
+      Hopefully.'
+    themeImage: {fileID: 0}
+    options: []
+    canvasType: 0

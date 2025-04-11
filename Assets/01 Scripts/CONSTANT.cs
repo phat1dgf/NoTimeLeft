@@ -5,4 +5,5 @@ using UnityEngine;
 public static class CONSTANT
 {
     public static string Tag_Player = "Player";
+    public static string Tag_Obstacle = "Obstacle";
 }
