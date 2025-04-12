@@ -56,7 +56,7 @@ public class VehicleStats : M_MonoBehaviour,IGetHit
 
     private void GameOver()
     {
-        // lose game
+        GameManager.Instance.GameOver();
     }
 
     public void GetHit()

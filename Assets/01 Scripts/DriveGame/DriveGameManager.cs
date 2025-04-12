@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class DriveGameManager : M_MonoBehaviour
 {
@@ -24,10 +25,6 @@ public class DriveGameManager : M_MonoBehaviour
         }
     }
 
-    private void Start()
-    {
-        _obstacleSpawnCoroutine = StartCoroutine(ObstacleSpawnCoroutine());
-    }
     private void OnEnable()
     {
         _obstacleSpawnCoroutine = StartCoroutine(ObstacleSpawnCoroutine());
@@ -38,25 +35,28 @@ public class DriveGameManager : M_MonoBehaviour
         StopCoroutine(_obstacleSpawnCoroutine);
         _obstacleSpawnCoroutine = null;
     }
-   
+
 
     IEnumerator ObstacleSpawnCoroutine()
     {
-        while(true)
+        while (true)
         {
-            float spawnTimer = UnityEngine.Random.Range(4f, 7f);
+            float spawnTimer = Random.Range(4f, 7f);
             yield return new WaitForSeconds(spawnTimer);
 
             float[] possibleY =
             {
-                ObstacleSpawner.Instance.transform.position.y,
-                ObstacleSpawner.Instance.transform.position.y + 3.5f,
-                ObstacleSpawner.Instance.transform.position.y - 3.5f
-            };
+            ObstacleSpawner.Instance.transform.position.y,
+            ObstacleSpawner.Instance.transform.position.y + 3,
+            ObstacleSpawner.Instance.transform.position.y - 3
+        };
 
-            float posY = possibleY[UnityEngine.Random.Range(0, possibleY.Length)];
+            float posY = possibleY[Random.Range(0, possibleY.Length)];
             Vector2 spawnPos = new Vector2(ObstacleSpawner.Instance.transform.position.x, posY);
-            ObstacleSpawner.Instance.CreateObstacle(ObstacleSpawner.Obstacle.obstacle, spawnPos, Quaternion.identity);
+
+            ObstacleSpawner.Instance.CreateObstacle(spawnPos, Quaternion.identity);
         }
     }
+
+
 }

@@ -20,7 +20,11 @@ MonoBehaviour:
 
       You check the date.'
     themeImage: {fileID: 0}
-    options: []
+    options:
+    - text: ...
+      nextContextId: intro2
+      endsContext: 0
+      actionId: 3
     canvasType: 0
   - contextId: intro2
     contextText: 'Two months.
@@ -35,7 +39,11 @@ MonoBehaviour:
       the rest of the world was fighting off a zombie apocalypse, you were dreaming
       about pizza and Netflix.'
     themeImage: {fileID: 0}
-    options: []
+    options:
+    - text: ...
+      nextContextId: intro3
+      endsContext: 0
+      actionId: 3
     canvasType: 0
   - contextId: intro3
     contextText: "Now you're the last one in a city crawling with the undead\u2014your
@@ -43,26 +51,42 @@ MonoBehaviour:
       building is starting to smell real funky.\n\nGood news? You just picked up
       a radio signal."
     themeImage: {fileID: 0}
-    options: []
+    options:
+    - text: ...
+      nextContextId: intro4
+      endsContext: 0
+      actionId: 3
     canvasType: 0
   - contextId: intro4
     contextText: "\u201CThis is Vault 104. We\u2019ve got food, safety, and no zombies.
       Evac closes in 7 days. Get here or get eaten. Over.\u201D"
     themeImage: {fileID: 0}
-    options: []
+    options:
+    - text: ...
+      nextContextId: intro5
+      endsContext: 0
+      actionId: 3
     canvasType: 0
   - contextId: intro5
     contextText: "Bad news? It\u2019s on the other side of the map.\n\nYou grab your
       trusty frying pan (don't ask), zip up your hoodie, and step into the apocalypse
       like it\u2019s just another Monday."
     themeImage: {fileID: 0}
-    options: []
+    options:
+    - text: ...
+      nextContextId: intro6
+      endsContext: 0
+      actionId: 3
     canvasType: 0
   - contextId: intro6
     contextText: "The clock is ticking. The zombies are hungry. And you really need
       a shower.\n\nLet\u2019s go."
     themeImage: {fileID: 0}
-    options: []
+    options:
+    - text: ...
+      nextContextId: intro7
+      endsContext: 0
+      actionId: 3
     canvasType: 0
   - contextId: intro7
     contextText: "But before you bolt out the door, you\u2019ve got just a few minutes
@@ -70,7 +94,11 @@ MonoBehaviour:
       wisely\u2014whatever you grab now could mean the difference between survival\u2026
       and snack time (for them)."
     themeImage: {fileID: 0}
-    options: []
+    options:
+    - text: 
+      nextContextId: home
+      endsContext: 0
+      actionId: 3
     canvasType: 0
   - contextId: home
     contextText: Check room
@@ -102,11 +130,11 @@ MonoBehaviour:
     themeImage: {fileID: 0}
     options:
     - text: Water Bottle
-      nextContextId: 
+      nextContextId: water_bottle
       endsContext: 0
       actionId: 0
     - text: Candy
-      nextContextId: 
+      nextContextId: candy
       endsContext: 0
       actionId: 0
     canvasType: 1
@@ -115,11 +143,11 @@ MonoBehaviour:
     themeImage: {fileID: 0}
     options:
     - text: Hamburger
-      nextContextId: 
+      nextContextId: hamburger
       endsContext: 0
       actionId: 0
     - text: Energy Drink
-      nextContextId: 
+      nextContextId: engergy_drink
       endsContext: 0
       actionId: 0
     canvasType: 1
@@ -128,15 +156,15 @@ MonoBehaviour:
     themeImage: {fileID: 0}
     options:
     - text: Water Bottle
-      nextContextId: 
+      nextContextId: water_bottle
       endsContext: 0
       actionId: 0
     - text: Hamburger
-      nextContextId: 
+      nextContextId: hamburger
       endsContext: 0
       actionId: 0
     - text: Energy bar
-      nextContextId: 
+      nextContextId: energy_bar
       endsContext: 0
       actionId: 0
     canvasType: 1
@@ -145,7 +173,7 @@ MonoBehaviour:
     themeImage: {fileID: 0}
     options:
     - text: Hamburger
-      nextContextId: 
+      nextContextId: hamburger
       endsContext: 0
       actionId: 0
     canvasType: 1
@@ -154,7 +182,7 @@ MonoBehaviour:
     themeImage: {fileID: 0}
     options:
     - text: Let's go
-      nextContextId: 
+      nextContextId: drive1
       endsContext: 0
       actionId: 0
     canvasType: 1
@@ -163,7 +191,7 @@ MonoBehaviour:
     themeImage: {fileID: 0}
     options:
     - text: Go
-      nextContextId: go
+      nextContextId: drive2
       endsContext: 0
       actionId: 0
     - text: Refuel
@@ -171,7 +199,7 @@ MonoBehaviour:
       endsContext: 0
       actionId: 0
     - text: Explore
-      nextContextId: explore
+      nextContextId: explore_gas_station1
       endsContext: 0
       actionId: 0
     - text: Open inventory
@@ -183,16 +211,71 @@ MonoBehaviour:
       endsContext: 0
       actionId: 0
     canvasType: 0
+  - contextId: explore_gas_station1
+    contextText: Choice
+    themeImage: {fileID: 0}
+    options:
+    - text: Back
+      nextContextId: back
+      endsContext: 0
+      actionId: 0
+    - text: Canteen
+      nextContextId: canteen1
+      endsContext: 0
+      actionId: 0
+    - text: Toilet
+      nextContextId: toilet1
+      endsContext: 0
+      actionId: 0
+    canvasType: 0
+  - contextId: canteen1
+    contextText: Choice
+    themeImage: {fileID: 0}
+    options:
+    - text: Back
+      nextContextId: back
+      endsContext: 0
+      actionId: 0
+    - text: Water Bottle
+      nextContextId: water_bottle
+      endsContext: 0
+      actionId: 0
+    - text: Water Bottle
+      nextContextId: water_bottle
+      endsContext: 0
+      actionId: 0
+    - text: Hamburger
+      nextContextId: hamburger
+      endsContext: 0
+      actionId: 0
+    canvasType: 1
+  - contextId: toilet1
+    contextText: Choice
+    themeImage: {fileID: 0}
+    options:
+    - text: Back
+      nextContextId: back
+      endsContext: 0
+      actionId: 0
+    - text: Crossbow
+      nextContextId: crossbow
+      endsContext: 0
+      actionId: 0
+    - text: Candy
+      nextContextId: candy
+      endsContext: 0
+      actionId: 0
+    canvasType: 1
   - contextId: super_market
     contextText: Check room
     themeImage: {fileID: 0}
     options:
     - text: Go
-      nextContextId: go
+      nextContextId: drive3
       endsContext: 0
       actionId: 0
     - text: Explore
-      nextContextId: explore
+      nextContextId: explore_super_market
       endsContext: 0
       actionId: 0
     - text: Open inventory
@@ -204,12 +287,76 @@ MonoBehaviour:
       endsContext: 0
       actionId: 0
     canvasType: 0
+  - contextId: explore_super_market
+    contextText: Choice
+    themeImage: {fileID: 0}
+    options:
+    - text: Back
+      nextContextId: back
+      endsContext: 0
+      actionId: 0
+    - text: Food Counter
+      nextContextId: food_counter
+      endsContext: 0
+      actionId: 0
+    - text: Storehouse
+      nextContextId: storehouse
+      endsContext: 0
+      actionId: 0
+    - text: W/C
+      nextContextId: w/c
+      endsContext: 0
+      actionId: 0
+    canvasType: 0
+  - contextId: food_counter
+    contextText: Choice
+    themeImage: {fileID: 0}
+    options:
+    - text: Back
+      nextContextId: back
+      endsContext: 0
+      actionId: 0
+    - text: Energy Bar
+      nextContextId: energy_bar
+      endsContext: 0
+      actionId: 0
+    - text: Energy Bar
+      nextContextId: energy_bar
+      endsContext: 0
+      actionId: 0
+    - text: Energy Drink
+      nextContextId: energy_drink
+      endsContext: 0
+      actionId: 0
+    canvasType: 1
+  - contextId: storehouse
+    contextText: Choice
+    themeImage: {fileID: 0}
+    options:
+    - text: Back
+      nextContextId: back
+      endsContext: 0
+      actionId: 0
+    - text: Gun
+      nextContextId: gun
+      endsContext: 0
+      actionId: 0
+    canvasType: 1
+  - contextId: w/c
+    contextText: Choice
+    themeImage: {fileID: 0}
+    options:
+    - text: Back
+      nextContextId: back
+      endsContext: 0
+      actionId: 0
+    canvasType: 1
   - contextId: gas_station2
     contextText: Check room
     themeImage: {fileID: 0}
     options:
     - text: Go
-      nextContextId: go
+      nextContextId: drive4
       endsContext: 0
       actionId: 0
     - text: Refuel
@@ -217,7 +364,7 @@ MonoBehaviour:
       endsContext: 0
       actionId: 0
     - text: Explore
-      nextContextId: explore
+      nextContextId: explore_gas_station2
       endsContext: 0
       actionId: 0
     - text: Open inventory
@@ -229,6 +376,53 @@ MonoBehaviour:
       endsContext: 0
       actionId: 0
     canvasType: 0
+  - contextId: explore_gas_station2
+    contextText: Choice
+    themeImage: {fileID: 0}
+    options:
+    - text: Back
+      nextContextId: back
+      endsContext: 0
+      actionId: 0
+    - text: Canteen
+      nextContextId: canteen2
+      endsContext: 0
+      actionId: 0
+    - text: Toilet
+      nextContextId: toilet2
+      endsContext: 0
+      actionId: 0
+    canvasType: 0
+  - contextId: canteen2
+    contextText: Choice
+    themeImage: {fileID: 0}
+    options:
+    - text: Back
+      nextContextId: back
+      endsContext: 0
+      actionId: 0
+    - text: Water Bottle
+      nextContextId: water_bottle
+      endsContext: 0
+      actionId: 0
+    - text: Candy
+      nextContextId: candy
+      endsContext: 0
+      actionId: 0
+    - text: Candy
+      nextContextId: candy
+      endsContext: 0
+      actionId: 0
+    canvasType: 1
+  - contextId: toilet2
+    contextText: Choice
+    themeImage: {fileID: 0}
+    options:
+    - text: Back
+      nextContextId: back
+      endsContext: 0
+      actionId: 0
+    canvasType: 1
   - contextId: ending1
     contextText: Congrate! You made it to the vault.
     themeImage: {fileID: 0}
