@@ -13,7 +13,7 @@ public class ObstacleMoving : M_MonoBehaviour
         base.Reset();
         this._rigid.gravityScale = 0;
         this._rigid.freezeRotation = true;
-        this._speed = 1;
+        this._speed = 5;
     }
     protected override void LoadComponents()
     {

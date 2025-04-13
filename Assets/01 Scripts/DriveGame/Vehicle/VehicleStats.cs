@@ -6,6 +6,7 @@ using UnityEngine;
 public class VehicleStats : M_MonoBehaviour,IGetHit
 {
     [SerializeField] private int _vehicleHP;
+    public int VehicleHP => _vehicleHP;
     [SerializeField] private float _immortalTime;
     [SerializeField] private float _immortalTimer;
     [SerializeField] private bool _isImmortal;

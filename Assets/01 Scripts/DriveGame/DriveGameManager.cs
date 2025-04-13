@@ -9,6 +9,9 @@ public class DriveGameManager : M_MonoBehaviour
     private static DriveGameManager _instance;
     public static DriveGameManager Instance => _instance;
 
+    [SerializeField] private VehicleController _vehicle;
+    public VehicleController Vehicle => _vehicle;
+
     Coroutine _obstacleSpawnCoroutine;
 
     protected override void Awake()
@@ -23,6 +26,12 @@ public class DriveGameManager : M_MonoBehaviour
         {
             Destroy(this.gameObject);
         }
+    }
+
+    protected override void LoadComponents()
+    {
+        base.LoadComponents();
+        _vehicle = FindAnyObjectByType<VehicleController>();
     }
 
     private void OnEnable()
