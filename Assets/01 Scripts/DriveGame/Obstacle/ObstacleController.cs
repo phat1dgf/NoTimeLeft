@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ObstacleController : M_MonoBehaviour
 {
-    private void Update()
+    protected void Update()
     {
         if(this.transform.position.x <= -11)
         {

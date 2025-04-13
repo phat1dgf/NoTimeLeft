@@ -9,6 +9,8 @@ public class InputManager : M_MonoBehaviour
 
     [SerializeField] private bool _isMoving;
     public bool IsMoving => _isMoving;
+    [SerializeField] private bool _isTabInventory;
+    public bool IsTabInventory => _isTabInventory;
 
     protected override void Awake()
     {
@@ -27,6 +29,7 @@ public class InputManager : M_MonoBehaviour
     private void Update()
     {
         MovingTracking();
+        InventoryTracking();
     }
     private void MovingTracking()
     {
@@ -34,5 +37,12 @@ public class InputManager : M_MonoBehaviour
             _isMoving = true;
         else 
             _isMoving = false;
+    }
+    private void InventoryTracking()
+    {
+        if (Input.GetKeyDown(KeyCode.Tab))
+            _isTabInventory = true;
+        else
+            _isTabInventory = false;
     }
 }

@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class ObstacleColliding : M_MonoBehaviour
 {
-    [SerializeField] private Collider2D _colli;
+    [SerializeField] protected Collider2D _colli;
     protected override void Reset()
     {
         base.Reset();
@@ -16,12 +16,12 @@ public class ObstacleColliding : M_MonoBehaviour
         base.LoadComponents();
         LoadCollider();
     }
-    private void LoadCollider()
+    protected virtual void LoadCollider()
     {
         if (this._colli != null) return;
         this._colli = this.GetComponent<Collider2D>();
     }
-    private void OnTriggerEnter2D(Collider2D collision)
+    protected virtual void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag(CONSTANT.Tag_Player))
         {

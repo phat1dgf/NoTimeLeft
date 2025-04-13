@@ -9,8 +9,11 @@ public class PlayerStats : M_MonoBehaviour
     public static PlayerStats Instance => _instance;
 
     [SerializeField] private int _food;
+    public int Food => _food;
     [SerializeField] private int _energy;
+    public int Energy => _energy;
     [SerializeField] private int _fuel;
+    public int Fuel => _fuel;
 
     protected override void Awake()
     {

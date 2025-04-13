@@ -5,8 +5,8 @@ using UnityEngine;
 
 public class ObstacleMoving : M_MonoBehaviour
 {
-    [SerializeField] private Rigidbody2D _rigid;
-    [SerializeField] private float _speed;
+    [SerializeField] protected Rigidbody2D _rigid;
+    [SerializeField] protected float _speed;
 
     protected override void Reset()
     {
@@ -21,20 +21,20 @@ public class ObstacleMoving : M_MonoBehaviour
         LoadRigidbody();
     }
 
-    private void LoadRigidbody()
+    protected virtual void LoadRigidbody()
     {
         if (this._rigid != null) return;
         this._rigid = GetComponentInParent<Rigidbody2D>();
     }
-    private void Start()
+    protected virtual void Start()
     {
         Moving();
     }
-    private void OnEnable()
+    protected virtual void OnEnable()
     {
         Moving();
     }
-    private void Moving()
+    protected virtual void Moving()
     {
         this._rigid.velocity = new Vector2(-_speed,0);
     }
