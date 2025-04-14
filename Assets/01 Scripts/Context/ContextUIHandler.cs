@@ -11,13 +11,14 @@ public class ContextUIHandler : MonoBehaviour
     public Transform optionsParent;
     public GameObject optionButtonPrefab;
 
+    public ContextController contextController;
+
     [Header("This Canvas Type")]
-    public CanvasType canvasType; 
+    public CanvasType canvasType;
+    
     private void OnEnable()
     {
-       
-        if (ContextController.Instance != null)
-            ContextController.Instance.RegisterListener(DisplayContext);
+        contextController.RegisterListener(DisplayContext);
     }
 
     //private void OnDisable()
@@ -40,7 +41,7 @@ public class ContextUIHandler : MonoBehaviour
         foreach (var option in context.options)
         {
             var btn = Instantiate(optionButtonPrefab, optionsParent);
-            btn.GetComponentInChildren<Text>().text = option.text;
+            btn.GetComponentInChildren<Text>().text = "> " + option.text;
 
             btn.GetComponent<Button>().onClick.AddListener(() =>
             {

@@ -62,11 +62,11 @@ public class ContextManager : MonoBehaviour
         return actionId switch
         {
             ActionID.NextContext => () => Debug.Log("Chuyển tới context kế"),
-            ActionID.Drive => () => Debug.Log("Bắt đầu game lái xe"),
-            ActionID.Refuel => () => Debug.Log("Đổ đầy xăng"),
-            ActionID.Sleep => () => Debug.Log("Hồi đầy năng lượng"),
+            ActionID.Drive => () => GameManager.Instance.MoveToDriveGame(),
+            ActionID.Refuel => () => PlayerController.Instance.PlayerStats.AddFuel(10),
+            ActionID.Sleep => () => PlayerController.Instance.PlayerStats.AddEnergy(10),
             ActionID.Take => () => Debug.Log("Lấy vật phảm vào túi"),
-            ActionID.MainMenu => () => Debug.Log("Quay lại menu"),
+            ActionID.MainMenu => () => GameManager.Instance.MoveToMainMenu(),
             _ => null
         };
     }

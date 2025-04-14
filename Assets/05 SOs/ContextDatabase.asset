@@ -130,13 +130,13 @@ MonoBehaviour:
     themeImage: {fileID: 0}
     options:
     - text: Water Bottle
-      nextContextId: water_bottle
+      nextContextId: 
       endsContext: 0
-      actionId: 6
+      actionId: 5
     - text: Candy
-      nextContextId: candy
+      nextContextId: 
       endsContext: 0
-      actionId: 6
+      actionId: 5
     - text: Back
       nextContextId: home
       endsContext: 0
@@ -147,13 +147,13 @@ MonoBehaviour:
     themeImage: {fileID: 21300000, guid: 0745801609508b549ab237ee65a87ac9, type: 3}
     options:
     - text: Hamburger
-      nextContextId: hamburger
+      nextContextId: 
       endsContext: 0
-      actionId: 6
+      actionId: 5
     - text: Energy Drink
-      nextContextId: engergy_drink
+      nextContextId: 
       endsContext: 0
-      actionId: 6
+      actionId: 5
     - text: Back
       nextContextId: home
       endsContext: 0
@@ -164,17 +164,17 @@ MonoBehaviour:
     themeImage: {fileID: 21300000, guid: 143fcef7504a7934f8c428fb1c10168f, type: 3}
     options:
     - text: Water Bottle
-      nextContextId: water_bottle
+      nextContextId: 
       endsContext: 0
-      actionId: 6
+      actionId: 5
     - text: Hamburger
-      nextContextId: hamburger
+      nextContextId: 
       endsContext: 0
-      actionId: 6
+      actionId: 5
     - text: Energy bar
-      nextContextId: energy_bar
+      nextContextId: 
       endsContext: 0
-      actionId: 6
+      actionId: 5
     - text: Back
       nextContextId: home
       endsContext: 0
@@ -185,9 +185,9 @@ MonoBehaviour:
     themeImage: {fileID: 21300000, guid: 5ff953ab05deb464c8b5d28fd40ed64c, type: 3}
     options:
     - text: Hamburger
-      nextContextId: hamburger
+      nextContextId: 
       endsContext: 0
-      actionId: 6
+      actionId: 5
     - text: Back
       nextContextId: home
       endsContext: 0
@@ -200,7 +200,7 @@ MonoBehaviour:
     - text: Let's go
       nextContextId: 
       endsContext: 1
-      actionId: 2
+      actionId: 1
     - text: Back
       nextContextId: home
       endsContext: 0
@@ -213,19 +213,19 @@ MonoBehaviour:
     - text: Go
       nextContextId: 
       endsContext: 1
-      actionId: 2
+      actionId: 1
     - text: Refuel
-      nextContextId: refuel
+      nextContextId: 
       endsContext: 0
-      actionId: 3
+      actionId: 2
     - text: Explore
       nextContextId: explore_gas_station1
       endsContext: 0
       actionId: 0
     - text: Sleep
-      nextContextId: sleep
+      nextContextId: 
       endsContext: 0
-      actionId: 5
+      actionId: 4
     canvasType: 0
   - contextId: explore_gas_station1
     contextText: Gas Station
@@ -249,17 +249,13 @@ MonoBehaviour:
     themeImage: {fileID: 21300000, guid: 32eaaff04ad14b74cbb31323dc24a109, type: 3}
     options:
     - text: Water Bottle
-      nextContextId: water_bottle
+      nextContextId: 
       endsContext: 0
-      actionId: 6
-    - text: Water Bottle
-      nextContextId: water_bottle
-      endsContext: 0
-      actionId: 6
+      actionId: 5
     - text: Hamburger
-      nextContextId: hamburger
+      nextContextId: 
       endsContext: 0
-      actionId: 6
+      actionId: 5
     - text: Back
       nextContextId: explore_gas_station1
       endsContext: 0
@@ -270,9 +266,9 @@ MonoBehaviour:
     themeImage: {fileID: 21300000, guid: e317faa1f651ba744980070cc1648567, type: 3}
     options:
     - text: Candy
-      nextContextId: candy
+      nextContextId: 
       endsContext: 0
-      actionId: 6
+      actionId: 5
     - text: Back
       nextContextId: explore_gas_station1
       endsContext: 0
@@ -285,15 +281,15 @@ MonoBehaviour:
     - text: Go
       nextContextId: 
       endsContext: 1
-      actionId: 2
+      actionId: 1
     - text: Explore
       nextContextId: explore_super_market
       endsContext: 0
       actionId: 0
     - text: Sleep
-      nextContextId: sleep
+      nextContextId: 
       endsContext: 0
-      actionId: 5
+      actionId: 4
     canvasType: 1
   - contextId: explore_super_market
     contextText: Supermarket
@@ -321,17 +317,17 @@ MonoBehaviour:
     themeImage: {fileID: 21300000, guid: 3dd03a299fd0a4c43a5723a5d9c2b0f7, type: 3}
     options:
     - text: Energy Bar
-      nextContextId: energy_bar
+      nextContextId: 
       endsContext: 0
-      actionId: 6
+      actionId: 5
     - text: Energy Bar
-      nextContextId: energy_bar
+      nextContextId: 
       endsContext: 0
-      actionId: 6
+      actionId: 5
     - text: Energy Drink
-      nextContextId: energy_drink
+      nextContextId: 
       endsContext: 0
-      actionId: 6
+      actionId: 5
     - text: Back
       nextContextId: explore_super_market
       endsContext: 0
@@ -362,19 +358,19 @@ MonoBehaviour:
     - text: Go
       nextContextId: 
       endsContext: 1
-      actionId: 2
+      actionId: 1
     - text: Refuel
       nextContextId: refuel
       endsContext: 0
-      actionId: 3
+      actionId: 2
     - text: Explore
       nextContextId: explore_gas_station2
       endsContext: 0
       actionId: 0
     - text: Sleep
-      nextContextId: sleep
+      nextContextId: 
       endsContext: 0
-      actionId: 5
+      actionId: 4
     canvasType: 0
   - contextId: explore_gas_station2
     contextText: Gas Station
@@ -398,15 +394,15 @@ MonoBehaviour:
     themeImage: {fileID: 21300000, guid: 32eaaff04ad14b74cbb31323dc24a109, type: 3}
     options:
     - text: Water Bottle
-      nextContextId: water_bottle
+      nextContextId: 
       endsContext: 0
       actionId: 6
     - text: Candy
-      nextContextId: candy
+      nextContextId: 
       endsContext: 0
       actionId: 6
     - text: Candy
-      nextContextId: candy
+      nextContextId: 
       endsContext: 0
       actionId: 6
     - text: Back
@@ -430,7 +426,7 @@ MonoBehaviour:
     - text: Main menu
       nextContextId: 
       endsContext: 1
-      actionId: 7
+      actionId: 6
     canvasType: 0
   - contextId: ending2
     contextText: No one was there to greet you.
@@ -439,7 +435,7 @@ MonoBehaviour:
     - text: Main menu
       nextContextId: 
       endsContext: 1
-      actionId: 7
+      actionId: 6
     canvasType: 0
   - contextId: ending3
     contextText: "The steel door creaked open\u2014revealing a dark tunnel with no
@@ -449,7 +445,7 @@ MonoBehaviour:
     - text: Main menu
       nextContextId: 
       endsContext: 1
-      actionId: 7
+      actionId: 6
     canvasType: 0
   - contextId: ending4
     contextText: 'The door closed behind you, sealing your journey with what felt
@@ -462,5 +458,5 @@ MonoBehaviour:
     - text: Main menu
       nextContextId: 
       endsContext: 1
-      actionId: 7
+      actionId: 6
     canvasType: 0
