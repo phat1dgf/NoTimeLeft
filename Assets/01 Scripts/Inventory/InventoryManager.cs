@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -15,6 +16,8 @@ public class InventoryManager : M_MonoBehaviour
     public ItemSlot[] itemSlot;
     public ItemSO[] itemSOs;
 
+    public PlayerStats playerStats;
+
     protected override void Awake()
     {
         base.Awake();
@@ -27,7 +30,10 @@ public class InventoryManager : M_MonoBehaviour
         {
             Destroy(this.gameObject);
         }
+        
     }
+
+   
 
     protected override void Reset()
     {
@@ -59,7 +65,7 @@ public class InventoryManager : M_MonoBehaviour
         {
             if (itemSOs[i].itemName == itemName)
             {
-                bool usable = itemSOs[i].UseItem();
+                bool usable = itemSOs[i].UseItem(playerStats);
                 return usable;
             } 
         }

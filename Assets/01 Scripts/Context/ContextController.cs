@@ -51,7 +51,6 @@ public class ContextController : MonoBehaviour
         {
             ShowCanvas(ctx.canvasType);
             currentContext = ctx;
-            Debug.Log(ctx.contextId);
             onContextUpdated?.Invoke(ctx);
         }
         else
@@ -64,15 +63,22 @@ public class ContextController : MonoBehaviour
     {
         option.Select();
 
+        if (!string.IsNullOrEmpty(option.optionId))
+            ContextManager.Instance.MarkOptionUsed(option.optionId);
+
         if (!option.endsContext && !string.IsNullOrEmpty(option.nextContextId))
         {
             StartContext(option.nextContextId);
         }
         else
         {
-            Debug.Log("Kết thúc context.");
+            Debug.Log("Context kết thúc.");
         }
+
+        // Cập nhật lại UI
+        onContextUpdated?.Invoke(currentContext);
     }
+
 
     private void ShowCanvas(CanvasType type)
     {

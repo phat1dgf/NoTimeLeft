@@ -49,6 +49,8 @@ public class ContextManager : MonoBehaviour
                     text = opt.text,
                     nextContextId = opt.nextContextId,
                     endsContext = opt.endsContext,
+                    optionId = opt.optionId,
+
                     onSelected = GetActionFromID(opt.actionId)
                 };
                 context.options.Add(option);
@@ -56,6 +58,19 @@ public class ContextManager : MonoBehaviour
 
             contextMap[context.contextId] = context;
         }
+    }
+
+    private HashSet<string> usedOptionIds = new();
+
+    public void MarkOptionUsed(string optionId)
+    {
+        if (!string.IsNullOrEmpty(optionId))
+            usedOptionIds.Add(optionId);
+    }
+
+    public bool IsOptionUsed(string optionId)
+    {
+        return !string.IsNullOrEmpty(optionId) && usedOptionIds.Contains(optionId);
     }
 
     public Context GetContextById(string id)

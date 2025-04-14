@@ -23,7 +23,11 @@ public class playerController : M_MonoBehaviour
         {
             Destroy(gameObject);
         }
+        
     }
+
+   
+
     protected override void LoadComponents()
     {
         base.LoadComponents();

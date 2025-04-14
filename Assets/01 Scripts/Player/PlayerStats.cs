@@ -27,7 +27,7 @@ public class PlayerStats : M_MonoBehaviour
     {
         _food = 2;
         _energy = 2;
-        _fuel = 2;
+        _fuel = 5;
     }
     protected override void Reset()
     {
@@ -45,6 +45,7 @@ public class PlayerStats : M_MonoBehaviour
     {
         if(_food <= 0 || _fuel <= 0 || _energy <= 0)
         {
+            Debug.Log("GameOver");
             GameOver();
         }
     }
@@ -62,6 +63,7 @@ public class PlayerStats : M_MonoBehaviour
             return;
         }
         this._food += food;
+        Debug.Log("FOOD "+_food);
     }
     public void ReduceFood(int food)
     {
@@ -75,10 +77,12 @@ public class PlayerStats : M_MonoBehaviour
             return;
         }
         this._energy += energy;
+        Debug.Log("ENERGY "+_energy);
     }
     public void ReduceEnergy(int energy)
     {
         this._energy -= energy;
+        
     }
     public void AddFuel(int fuel)
     {
@@ -88,6 +92,7 @@ public class PlayerStats : M_MonoBehaviour
             return;
         }
         this._fuel += fuel;
+        Debug.Log("FUEL "+_fuel);
     }
     public void ReduceFuel(int fuel)
     {

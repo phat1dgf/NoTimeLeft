@@ -674,8 +674,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _vehicle: {fileID: 318005998}
-  _timer: 0
-  _roundTime: 0
+  _timer: 60
+  _roundTime: 60
 --- !u!1 &616729852
 GameObject:
   m_ObjectHideFlags: 0

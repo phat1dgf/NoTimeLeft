@@ -27,26 +27,60 @@ public class ContextUIHandler : MonoBehaviour
     //        ContextController.Instance.UnregisterListener(DisplayContext);
     //}
 
+    //void DisplayContext(Context context)
+    //{
+        
+    //    contextTextUI.text = context.contextText;
+    //    contextImageUI.sprite = context.themeImage;
+
+    //    foreach (Transform child in optionsParent)
+    //        Destroy(child.gameObject);
+
+    //    foreach (var option in context.options)
+    //    {
+    //        var btn = Instantiate(optionButtonPrefab, optionsParent);
+    //        btn.GetComponentInChildren<Text>().text = "> " + option.text;
+
+    //        btn.GetComponent<Button>().onClick.AddListener(() =>
+    //        {
+    //            ContextController.Instance.SelectOption(option);
+    //        });
+    //    }
+    //}
     void DisplayContext(Context context)
     {
-        
-        Debug.Log(contextTextUI.text);
         contextTextUI.text = context.contextText;
         contextImageUI.sprite = context.themeImage;
-        Debug.Log(contextTextUI.text);
 
         foreach (Transform child in optionsParent)
             Destroy(child.gameObject);
 
         foreach (var option in context.options)
         {
-            var btn = Instantiate(optionButtonPrefab, optionsParent);
-            btn.GetComponentInChildren<Text>().text = "> " + option.text;
+            var btnGO = Instantiate(optionButtonPrefab, optionsParent);
+            var btn = btnGO.GetComponent<Button>();
+            var btnText = btnGO.GetComponentInChildren<Text>();
 
-            btn.GetComponent<Button>().onClick.AddListener(() =>
+            btnText.text = "> " + option.text;
+
+            if (!string.IsNullOrEmpty(option.optionId) && ContextManager.Instance.IsOptionUsed(option.optionId))
             {
-                ContextController.Instance.SelectOption(option);
-            });
+                //// Cách 1: XÁM NÚT + VÔ HIỆU HÓA
+                //btn.interactable = false;
+                //btnText.color = Color.gray;
+
+                //// Cách 2: ẨN HẲN NÚT (nếu bạn muốn)
+                Destroy(btnGO);
+                continue;
+            }
+            else
+            {
+                btn.onClick.AddListener(() =>
+                {
+                    ContextController.Instance.SelectOption(option);
+                });
+            }
         }
     }
+
 }

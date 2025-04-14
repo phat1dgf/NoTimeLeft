@@ -9,42 +9,33 @@ public class ItemSO : ScriptableObject
     public int amountToChangeStat;
     public Sprite sprite;
 
-    public bool UseItem()
+    public bool UseItem(PlayerStats playerStats)
     {
-        PlayerStats playerStats = playerController.Instance.PlayerStats;
-
-        if (stat == StatToChange.Food)
+        if (playerStats == null)
         {
-            if (playerStats.Food == playerStats.MaxFood) 
-                return false;
-            else
-            {
+            Debug.LogError("PlayerStats is null when using item.");
+            return false;
+        }
+
+        switch (stat)
+        {
+            case StatToChange.Food:
+                if (playerStats.Food == playerStats.MaxFood) return false;
                 playerStats.AddFood(amountToChangeStat);
                 return true;
-            }
-        }
-        if (stat == StatToChange.Energy)
-        {
-            if (playerStats.Energy == playerStats.MaxEnergy)
-                return false;
-            else
-            {
+            case StatToChange.Energy:
+                if (playerStats.Energy == playerStats.MaxEnergy) return false;
                 playerStats.AddEnergy(amountToChangeStat);
                 return true;
-            }
-        }
-        if (stat == StatToChange.Fuel)
-        {
-            if (playerStats.Fuel == playerStats.MaxFuel)
-                return false;
-            else
-            {
+            case StatToChange.Fuel:
+                if (playerStats.Fuel == playerStats.MaxFuel) return false;
                 playerStats.AddFuel(amountToChangeStat);
                 return true;
-            }
         }
+
         return false;
     }
+
 
     public enum StatToChange
     {

@@ -21,7 +21,8 @@ MonoBehaviour:
       You check the date.'
     themeImage: {fileID: 21300000, guid: 7e864accb2ee4cc418149fceec07270c, type: 3}
     options:
-    - text: ...
+    - optionId: 
+      text: ...
       nextContextId: intro2
       endsContext: 0
       actionId: 0
@@ -40,7 +41,8 @@ MonoBehaviour:
       about pizza and Netflix.'
     themeImage: {fileID: 21300000, guid: 7e864accb2ee4cc418149fceec07270c, type: 3}
     options:
-    - text: ...
+    - optionId: 
+      text: ...
       nextContextId: intro3
       endsContext: 0
       actionId: 0
@@ -52,7 +54,8 @@ MonoBehaviour:
       a radio signal."
     themeImage: {fileID: 21300000, guid: 7e864accb2ee4cc418149fceec07270c, type: 3}
     options:
-    - text: ...
+    - optionId: 
+      text: ...
       nextContextId: intro4
       endsContext: 0
       actionId: 0
@@ -62,7 +65,8 @@ MonoBehaviour:
       Evac closes in 3 days. Get here or get eaten. Over.\u201D"
     themeImage: {fileID: 21300000, guid: 7e864accb2ee4cc418149fceec07270c, type: 3}
     options:
-    - text: ...
+    - optionId: 
+      text: ...
       nextContextId: intro5
       endsContext: 0
       actionId: 0
@@ -73,7 +77,8 @@ MonoBehaviour:
       like it\u2019s just another Monday."
     themeImage: {fileID: 21300000, guid: 7e864accb2ee4cc418149fceec07270c, type: 3}
     options:
-    - text: ...
+    - optionId: 
+      text: ...
       nextContextId: intro6
       endsContext: 0
       actionId: 0
@@ -83,7 +88,8 @@ MonoBehaviour:
       a shower.\n\nLet\u2019s go."
     themeImage: {fileID: 21300000, guid: 7e864accb2ee4cc418149fceec07270c, type: 3}
     options:
-    - text: ...
+    - optionId: 
+      text: ...
       nextContextId: intro7
       endsContext: 0
       actionId: 0
@@ -95,7 +101,8 @@ MonoBehaviour:
       and snack time (for them)."
     themeImage: {fileID: 21300000, guid: 7e864accb2ee4cc418149fceec07270c, type: 3}
     options:
-    - text: Go pick up things in the house
+    - optionId: 
+      text: Go pick up things in the house
       nextContextId: home
       endsContext: 0
       actionId: 0
@@ -104,23 +111,28 @@ MonoBehaviour:
     contextText: Home
     themeImage: {fileID: 21300000, guid: 722476c525e721c458f829a1ae3bcabe, type: 3}
     options:
-    - text: Bedroom
+    - optionId: 
+      text: Bedroom
       nextContextId: bedroom
       endsContext: 0
       actionId: 0
-    - text: Living room
+    - optionId: 
+      text: Living room
       nextContextId: livingroom
       endsContext: 0
       actionId: 0
-    - text: Kitchen
+    - optionId: 
+      text: Kitchen
       nextContextId: kitchen
       endsContext: 0
       actionId: 0
-    - text: Backyard
+    - optionId: 
+      text: Backyard
       nextContextId: backyard
       endsContext: 0
       actionId: 0
-    - text: Garage
+    - optionId: 
+      text: Garage
       nextContextId: garage
       endsContext: 0
       actionId: 0
@@ -129,15 +141,18 @@ MonoBehaviour:
     contextText: Bedroom
     themeImage: {fileID: 0}
     options:
-    - text: Water Bottle
+    - optionId: bottle
+      text: Water Bottle
       nextContextId: 
       endsContext: 0
-      actionId: 5
-    - text: Candy
+      actionId: 7
+    - optionId: candy
+      text: Candy
       nextContextId: 
       endsContext: 0
-      actionId: 5
-    - text: Back
+      actionId: 8
+    - optionId: 
+      text: Back
       nextContextId: home
       endsContext: 0
       actionId: 0
@@ -146,15 +161,18 @@ MonoBehaviour:
     contextText: Living Room
     themeImage: {fileID: 21300000, guid: 0745801609508b549ab237ee65a87ac9, type: 3}
     options:
-    - text: Hamburger
+    - optionId: hamburger
+      text: Hamburger
       nextContextId: 
       endsContext: 0
-      actionId: 5
-    - text: Energy Drink
+      actionId: 12
+    - optionId: enegy
+      text: Energy Drink
       nextContextId: 
       endsContext: 0
-      actionId: 5
-    - text: Back
+      actionId: 11
+    - optionId: 
+      text: Back
       nextContextId: home
       endsContext: 0
       actionId: 0
@@ -163,19 +181,23 @@ MonoBehaviour:
     contextText: Kitchen
     themeImage: {fileID: 21300000, guid: 143fcef7504a7934f8c428fb1c10168f, type: 3}
     options:
-    - text: Water Bottle
+    - optionId: bottle
+      text: Water Bottle
       nextContextId: 
       endsContext: 0
-      actionId: 5
-    - text: Hamburger
+      actionId: 7
+    - optionId: hamburger
+      text: Hamburger
       nextContextId: 
       endsContext: 0
-      actionId: 5
-    - text: Energy bar
+      actionId: 12
+    - optionId: enegy
+      text: Energy Drink
       nextContextId: 
       endsContext: 0
-      actionId: 5
-    - text: Back
+      actionId: 11
+    - optionId: 
+      text: Back
       nextContextId: home
       endsContext: 0
       actionId: 0
@@ -184,11 +206,13 @@ MonoBehaviour:
     contextText: Backyard
     themeImage: {fileID: 21300000, guid: 5ff953ab05deb464c8b5d28fd40ed64c, type: 3}
     options:
-    - text: Hamburger
+    - optionId: hamburger
+      text: Hamburger
       nextContextId: 
       endsContext: 0
-      actionId: 5
-    - text: Back
+      actionId: 12
+    - optionId: 
+      text: Back
       nextContextId: home
       endsContext: 0
       actionId: 0
@@ -197,11 +221,13 @@ MonoBehaviour:
     contextText: Garage
     themeImage: {fileID: 21300000, guid: 112967449e0bde048aa4a93f44f0cd90, type: 3}
     options:
-    - text: Go (-3h, -2 Food, -1 Energy, -2 Fuel)
+    - optionId: 
+      text: Go (-3h, -2 Food, -1 Energy, -2 Fuel)
       nextContextId: 
       endsContext: 1
       actionId: 13
-    - text: Back
+    - optionId: 
+      text: Back
       nextContextId: home
       endsContext: 0
       actionId: 0
@@ -210,36 +236,43 @@ MonoBehaviour:
     contextText: Gas Station
     themeImage: {fileID: 21300000, guid: 460618ab64096c142bdf1b5868fbfdba, type: 3}
     options:
-    - text: Go (-6h, -5 Food, -4 Energy, -6 Fuel)
+    - optionId: 
+      text: Go (-6h, -5 Food, -4 Energy, -6 Fuel)
       nextContextId: 
       endsContext: 1
       actionId: 14
-    - text: Refuel
+    - optionId: 
+      text: Refuel
       nextContextId: 
       endsContext: 0
       actionId: 2
-    - text: Explore
+    - optionId: 
+      text: Explore
       nextContextId: explore_gas_station1
       endsContext: 0
       actionId: 0
-    - text: Sleep
+    - optionId: 
+      text: Sleep
       nextContextId: 
       endsContext: 0
       actionId: 4
-    canvasType: 0
+    canvasType: 1
   - contextId: explore_gas_station1
     contextText: Gas Station
     themeImage: {fileID: 21300000, guid: 460618ab64096c142bdf1b5868fbfdba, type: 3}
     options:
-    - text: Back
+    - optionId: 
+      text: Back
       nextContextId: gas_station1
       endsContext: 0
       actionId: 0
-    - text: Canteen
+    - optionId: 
+      text: Canteen
       nextContextId: canteen1
       endsContext: 0
       actionId: 0
-    - text: Toilet
+    - optionId: 
+      text: Toilet
       nextContextId: toilet1
       endsContext: 0
       actionId: 0
@@ -248,15 +281,18 @@ MonoBehaviour:
     contextText: Choice
     themeImage: {fileID: 21300000, guid: 32eaaff04ad14b74cbb31323dc24a109, type: 3}
     options:
-    - text: Water Bottle
+    - optionId: bottle
+      text: Water Bottle
       nextContextId: 
       endsContext: 0
-      actionId: 5
-    - text: Hamburger
+      actionId: 7
+    - optionId: hamburger
+      text: Hamburger
       nextContextId: 
       endsContext: 0
-      actionId: 5
-    - text: Back
+      actionId: 12
+    - optionId: 
+      text: Back
       nextContextId: explore_gas_station1
       endsContext: 0
       actionId: 0
@@ -265,11 +301,13 @@ MonoBehaviour:
     contextText: Choice
     themeImage: {fileID: 21300000, guid: e317faa1f651ba744980070cc1648567, type: 3}
     options:
-    - text: Candy
+    - optionId: candy
+      text: Candy
       nextContextId: 
       endsContext: 0
-      actionId: 5
-    - text: Back
+      actionId: 8
+    - optionId: 
+      text: Back
       nextContextId: explore_gas_station1
       endsContext: 0
       actionId: 0
@@ -278,15 +316,18 @@ MonoBehaviour:
     contextText: Supermarket
     themeImage: {fileID: 21300000, guid: 2825ece0aeca7e547a9b1f1e4282af7b, type: 3}
     options:
-    - text: Go (-4h, -4 Food, -3 Energy, -3 Fuel)
+    - optionId: 
+      text: Go (-4h, -4 Food, -3 Energy, -3 Fuel)
       nextContextId: 
       endsContext: 1
       actionId: 15
-    - text: Explore
+    - optionId: 
+      text: Explore
       nextContextId: explore_super_market
       endsContext: 0
       actionId: 0
-    - text: Sleep
+    - optionId: 
+      text: Sleep
       nextContextId: 
       endsContext: 0
       actionId: 4
@@ -295,19 +336,23 @@ MonoBehaviour:
     contextText: Supermarket
     themeImage: {fileID: 21300000, guid: 2825ece0aeca7e547a9b1f1e4282af7b, type: 3}
     options:
-    - text: Back
+    - optionId: 
+      text: Back
       nextContextId: super_market
       endsContext: 0
       actionId: 0
-    - text: Food Counter
+    - optionId: 
+      text: Food Counter
       nextContextId: food_counter
       endsContext: 0
       actionId: 0
-    - text: Storehouse
+    - optionId: 
+      text: Storehouse
       nextContextId: storehouse
       endsContext: 0
       actionId: 0
-    - text: W/C
+    - optionId: 
+      text: W/C
       nextContextId: w/c
       endsContext: 0
       actionId: 0
@@ -316,19 +361,23 @@ MonoBehaviour:
     contextText: Food Conuter
     themeImage: {fileID: 21300000, guid: 3dd03a299fd0a4c43a5723a5d9c2b0f7, type: 3}
     options:
-    - text: Energy Bar
+    - optionId: choco
+      text: Choco Bar
       nextContextId: 
       endsContext: 0
-      actionId: 5
-    - text: Energy Bar
+      actionId: 9
+    - optionId: choco
+      text: Choco Bar
       nextContextId: 
       endsContext: 0
-      actionId: 5
-    - text: Energy Drink
+      actionId: 9
+    - optionId: enegy
+      text: Energy Drink
       nextContextId: 
       endsContext: 0
-      actionId: 5
-    - text: Back
+      actionId: 11
+    - optionId: 
+      text: Back
       nextContextId: explore_super_market
       endsContext: 0
       actionId: 0
@@ -337,7 +386,8 @@ MonoBehaviour:
     contextText: Storehouse
     themeImage: {fileID: 21300000, guid: cf66b9b179e75ee4b93ae80b0eaa3ce6, type: 3}
     options:
-    - text: Back
+    - optionId: 
+      text: Back
       nextContextId: explore_super_market
       endsContext: 0
       actionId: 0
@@ -346,7 +396,8 @@ MonoBehaviour:
     contextText: WC
     themeImage: {fileID: 21300000, guid: e317faa1f651ba744980070cc1648567, type: 3}
     options:
-    - text: Back
+    - optionId: 
+      text: Back
       nextContextId: explore_super_market
       endsContext: 0
       actionId: 0
@@ -355,36 +406,43 @@ MonoBehaviour:
     contextText: Gas Station
     themeImage: {fileID: 21300000, guid: bb2256cbf953ec14ca1d6ad0ec367b3e, type: 3}
     options:
-    - text: Go (-3h, -3 Food, -3 Energy, -2 Fuel)
+    - optionId: 
+      text: Go (-3h, -3 Food, -3 Energy, -2 Fuel)
       nextContextId: 
       endsContext: 1
       actionId: 16
-    - text: Refuel
+    - optionId: 
+      text: Refuel
       nextContextId: refuel
       endsContext: 0
       actionId: 2
-    - text: Explore
+    - optionId: 
+      text: Explore
       nextContextId: explore_gas_station2
       endsContext: 0
       actionId: 0
-    - text: Sleep
+    - optionId: 
+      text: Sleep
       nextContextId: 
       endsContext: 0
       actionId: 4
-    canvasType: 0
+    canvasType: 1
   - contextId: explore_gas_station2
     contextText: Gas Station
     themeImage: {fileID: 21300000, guid: bb2256cbf953ec14ca1d6ad0ec367b3e, type: 3}
     options:
-    - text: Canteen
+    - optionId: 
+      text: Canteen
       nextContextId: canteen2
       endsContext: 0
       actionId: 0
-    - text: Toilet
+    - optionId: 
+      text: Toilet
       nextContextId: toilet2
       endsContext: 0
       actionId: 0
-    - text: Back
+    - optionId: 
+      text: Back
       nextContextId: gas_station2
       endsContext: 0
       actionId: 0
@@ -393,19 +451,23 @@ MonoBehaviour:
     contextText: Canteen
     themeImage: {fileID: 21300000, guid: 32eaaff04ad14b74cbb31323dc24a109, type: 3}
     options:
-    - text: Water Bottle
+    - optionId: bottle
+      text: Water Bottle
       nextContextId: 
       endsContext: 0
-      actionId: 6
-    - text: Candy
+      actionId: 7
+    - optionId: candy
+      text: Candy
       nextContextId: 
       endsContext: 0
-      actionId: 6
-    - text: Candy
+      actionId: 8
+    - optionId: candy
+      text: Candy
       nextContextId: 
       endsContext: 0
-      actionId: 6
-    - text: Back
+      actionId: 8
+    - optionId: 
+      text: Back
       nextContextId: explore_gas_station2
       endsContext: 0
       actionId: 0
@@ -414,7 +476,8 @@ MonoBehaviour:
     contextText: Toilet
     themeImage: {fileID: 21300000, guid: e317faa1f651ba744980070cc1648567, type: 3}
     options:
-    - text: Back
+    - optionId: 
+      text: Back
       nextContextId: explore_gas_station2
       endsContext: 0
       actionId: 0
@@ -423,7 +486,8 @@ MonoBehaviour:
     contextText: Congrate! You made it to the vault.
     themeImage: {fileID: 21300000, guid: e38208d481285a240a3cd219eaa0221d, type: 3}
     options:
-    - text: Main menu
+    - optionId: 
+      text: Main menu
       nextContextId: 
       endsContext: 1
       actionId: 6
@@ -432,7 +496,8 @@ MonoBehaviour:
     contextText: No one was there to greet you.
     themeImage: {fileID: 0}
     options:
-    - text: Main menu
+    - optionId: 
+      text: Main menu
       nextContextId: 
       endsContext: 1
       actionId: 6
@@ -442,7 +507,8 @@ MonoBehaviour:
       end in sight.\n\nYou stepped inside, not knowing what awaits."
     themeImage: {fileID: 0}
     options:
-    - text: Main menu
+    - optionId: 
+      text: Main menu
       nextContextId: 
       endsContext: 1
       actionId: 6
@@ -455,7 +521,8 @@ MonoBehaviour:
       Hopefully.'
     themeImage: {fileID: 0}
     options:
-    - text: Main menu
+    - optionId: 
+      text: Main menu
       nextContextId: 
       endsContext: 1
       actionId: 6

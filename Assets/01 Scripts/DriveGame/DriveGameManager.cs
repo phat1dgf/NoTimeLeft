@@ -17,6 +17,9 @@ public class DriveGameManager : M_MonoBehaviour
     [SerializeField] private float _timer;
     [SerializeField] private float _roundTime;
 
+    private int driveIndex = 0;
+
+
     protected override void Reset()
     {
         base.Reset();
@@ -36,11 +39,33 @@ public class DriveGameManager : M_MonoBehaviour
             if (_timer <= 0f)
             {
                 _timer = 0f;
-                GameManager.Instance.MoveToContextGame();
                 _timer = _roundTime;
+
+                switch (driveIndex)
+                {
+                    case 0:
+                        GameManager.Instance.ContextGas1();
+                        break;
+                    case 1:
+                        GameManager.Instance.ContextSup();
+                        break;
+                    case 2:
+                        GameManager.Instance.ContextGas2();
+                        break;
+                    case 3:
+                        
+                        break;
+                    default:
+                        Debug.LogWarning("No more drive stages.");
+                        break;
+                }
+
+                driveIndex++;
             }
         }
     }
+
+
 
     protected override void Awake()
     {

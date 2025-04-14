@@ -7,7 +7,7 @@ public class GameManager : M_MonoBehaviour
     private static GameManager _instance;
     public static GameManager Instance => _instance;
 
-    private string contextToStart;
+    private string currentContext;
 
     [SerializeField] private int countdownToDie;
     public int CountdownToDie => countdownToDie;
@@ -64,25 +64,43 @@ public class GameManager : M_MonoBehaviour
     }
     public void StartGame()
     {
-        contextToStart = CONSTANT.ContextID_intro; 
+        currentContext = CONSTANT.ContextID_intro; 
+        SceneManager.sceneLoaded += OnSceneLoaded;
+        SceneManager.LoadScene(CONSTANT.SceneName_ContextScene);
+    } 
+    public void ContextGas1()
+    {
+        currentContext = CONSTANT.ContextID_gasstation1; 
+        SceneManager.sceneLoaded += OnSceneLoaded;
+        SceneManager.LoadScene(CONSTANT.SceneName_ContextScene);
+    }
+    public void ContextSup()
+    {
+        currentContext = CONSTANT.ContextID_supermarket; 
+        SceneManager.sceneLoaded += OnSceneLoaded;
+        SceneManager.LoadScene(CONSTANT.SceneName_ContextScene);
+    }
+    public void ContextGas2()
+    {
+        currentContext = CONSTANT.ContextID_gasstation2;
         SceneManager.sceneLoaded += OnSceneLoaded;
         SceneManager.LoadScene(CONSTANT.SceneName_ContextScene);
     }
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        if (scene.name == CONSTANT.SceneName_ContextScene && contextToStart != null)
+        if (scene.name == CONSTANT.SceneName_ContextScene && currentContext != null)
         {
             if (ContextController.Instance != null)
             {
-                ContextController.Instance.StartContext(contextToStart);
+                ContextController.Instance.StartContext(currentContext);
             }
             else
             {
                 Debug.LogWarning("ContextController not found after scene load.");
             }
 
-            contextToStart = null;
+            currentContext = null;
             SceneManager.sceneLoaded -= OnSceneLoaded;
         }
     }
