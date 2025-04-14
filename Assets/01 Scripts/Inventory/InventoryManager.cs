@@ -23,7 +23,7 @@ public class InventoryManager : M_MonoBehaviour
             _instance = this;
             return;
         }
-        if(_instance.gameObject.GetInstanceID() == this.gameObject.GetInstanceID())
+        if(_instance.gameObject.GetInstanceID() != this.gameObject.GetInstanceID())
         {
             Destroy(this.gameObject);
         }

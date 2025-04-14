@@ -15,7 +15,7 @@ public class GameManager : M_MonoBehaviour
             DontDestroyOnLoad(this.gameObject);
             return;
         }
-        if(_instance.gameObject.GetInstanceID() == this.gameObject.GetInstanceID())
+        if(_instance.gameObject.GetInstanceID() != this.gameObject.GetInstanceID())
         {
             Destroy(this.gameObject);
         }

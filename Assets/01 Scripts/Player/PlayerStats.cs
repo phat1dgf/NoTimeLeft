@@ -5,8 +5,7 @@ using UnityEngine;
 
 public class PlayerStats : M_MonoBehaviour
 {
-    //private static PlayerStats _instance;
-    //public static PlayerStats Instance => _instance;
+  
 
     [SerializeField] private int _food;
     public int Food => _food;
@@ -22,20 +21,7 @@ public class PlayerStats : M_MonoBehaviour
     [SerializeField] private int _maxFuel;
     public float MaxFuel => _maxFuel;
 
-    //protected override void Awake()
-    //{
-    //    base.Awake();
-    //    //if (_instance == null)
-    //    //{
-    //    //    _instance = this;
-    //    //    DontDestroyOnLoad(this.gameObject);
-    //    //    return;
-    //    //}
-    //    //if(_instance.gameObject.GetInstanceID() != this.gameObject.GetInstanceID())
-    //    //{
-    //    //    Destroy(this.gameObject);
-    //    //}
-    //}
+    
 
     private void Start()
     {
