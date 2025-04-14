@@ -10,8 +10,11 @@ public class ContextOptionData
 }
 public enum ActionID
 {
-    None,
-    Damage10,
-    LogEscape,
-    NextContext,  
+    NextContext,
+    Drive, 
+    Refuel,
+    Inventory,
+    Sleep,
+    Take,
+    MainMenu,
 }

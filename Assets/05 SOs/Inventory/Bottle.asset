@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 973f7e7272b68e6488a1d1210284d2c4, type: 3}
   m_Name: Bottle
   m_EditorClassIdentifier: 
-  itemName: Bottle
+  itemName: Water Bottle
   stat: 0
   amountToChangeStat: 2

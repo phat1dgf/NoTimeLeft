@@ -19,12 +19,12 @@ MonoBehaviour:
 
 
       You check the date.'
-    themeImage: {fileID: 0}
+    themeImage: {fileID: 21300000, guid: 7e864accb2ee4cc418149fceec07270c, type: 3}
     options:
     - text: ...
       nextContextId: intro2
       endsContext: 0
-      actionId: 3
+      actionId: 0
     canvasType: 0
   - contextId: intro2
     contextText: 'Two months.
@@ -38,71 +38,71 @@ MonoBehaviour:
       blackout curtains. Maybe you really needed that nap. Whatever the reason, while
       the rest of the world was fighting off a zombie apocalypse, you were dreaming
       about pizza and Netflix.'
-    themeImage: {fileID: 0}
+    themeImage: {fileID: 21300000, guid: 7e864accb2ee4cc418149fceec07270c, type: 3}
     options:
     - text: ...
       nextContextId: intro3
       endsContext: 0
-      actionId: 3
+      actionId: 0
     canvasType: 0
   - contextId: intro3
     contextText: "Now you're the last one in a city crawling with the undead\u2014your
       fridge is empty, your neighbors are moaning (and not in the fun way), and your
       building is starting to smell real funky.\n\nGood news? You just picked up
       a radio signal."
-    themeImage: {fileID: 0}
+    themeImage: {fileID: 21300000, guid: 7e864accb2ee4cc418149fceec07270c, type: 3}
     options:
     - text: ...
       nextContextId: intro4
       endsContext: 0
-      actionId: 3
+      actionId: 0
     canvasType: 0
   - contextId: intro4
     contextText: "\u201CThis is Vault 104. We\u2019ve got food, safety, and no zombies.
       Evac closes in 7 days. Get here or get eaten. Over.\u201D"
-    themeImage: {fileID: 0}
+    themeImage: {fileID: 21300000, guid: 7e864accb2ee4cc418149fceec07270c, type: 3}
     options:
     - text: ...
       nextContextId: intro5
       endsContext: 0
-      actionId: 3
+      actionId: 0
     canvasType: 0
   - contextId: intro5
     contextText: "Bad news? It\u2019s on the other side of the map.\n\nYou grab your
       trusty frying pan (don't ask), zip up your hoodie, and step into the apocalypse
       like it\u2019s just another Monday."
-    themeImage: {fileID: 0}
+    themeImage: {fileID: 21300000, guid: 7e864accb2ee4cc418149fceec07270c, type: 3}
     options:
     - text: ...
       nextContextId: intro6
       endsContext: 0
-      actionId: 3
+      actionId: 0
     canvasType: 0
   - contextId: intro6
     contextText: "The clock is ticking. The zombies are hungry. And you really need
       a shower.\n\nLet\u2019s go."
-    themeImage: {fileID: 0}
+    themeImage: {fileID: 21300000, guid: 7e864accb2ee4cc418149fceec07270c, type: 3}
     options:
     - text: ...
       nextContextId: intro7
       endsContext: 0
-      actionId: 3
+      actionId: 0
     canvasType: 0
   - contextId: intro7
     contextText: "But before you bolt out the door, you\u2019ve got just a few minutes
       to scavenge your apartment. Food? Flashlight? That one sock you always lose?\n\nChoose
       wisely\u2014whatever you grab now could mean the difference between survival\u2026
       and snack time (for them)."
-    themeImage: {fileID: 0}
+    themeImage: {fileID: 21300000, guid: 7e864accb2ee4cc418149fceec07270c, type: 3}
     options:
-    - text: 
+    - text: Go pick up things in the house
       nextContextId: home
       endsContext: 0
-      actionId: 3
+      actionId: 0
     canvasType: 0
   - contextId: home
-    contextText: Check room
-    themeImage: {fileID: 0}
+    contextText: Home
+    themeImage: {fileID: 21300000, guid: 722476c525e721c458f829a1ae3bcabe, type: 3}
     options:
     - text: Bedroom
       nextContextId: bedroom
@@ -124,99 +124,115 @@ MonoBehaviour:
       nextContextId: garage
       endsContext: 0
       actionId: 0
-    canvasType: 0
+    canvasType: 1
   - contextId: bedroom
-    contextText: Choice
+    contextText: Bedroom
     themeImage: {fileID: 0}
     options:
     - text: Water Bottle
       nextContextId: water_bottle
       endsContext: 0
-      actionId: 0
+      actionId: 6
     - text: Candy
       nextContextId: candy
+      endsContext: 0
+      actionId: 6
+    - text: Back
+      nextContextId: home
       endsContext: 0
       actionId: 0
     canvasType: 1
   - contextId: livingroom
-    contextText: Choice
-    themeImage: {fileID: 0}
+    contextText: Living Room
+    themeImage: {fileID: 21300000, guid: 0745801609508b549ab237ee65a87ac9, type: 3}
     options:
     - text: Hamburger
       nextContextId: hamburger
       endsContext: 0
-      actionId: 0
+      actionId: 6
     - text: Energy Drink
       nextContextId: engergy_drink
+      endsContext: 0
+      actionId: 6
+    - text: Back
+      nextContextId: home
       endsContext: 0
       actionId: 0
     canvasType: 1
   - contextId: kitchen
-    contextText: Choice
-    themeImage: {fileID: 0}
+    contextText: Kitchen
+    themeImage: {fileID: 21300000, guid: 143fcef7504a7934f8c428fb1c10168f, type: 3}
     options:
     - text: Water Bottle
       nextContextId: water_bottle
       endsContext: 0
-      actionId: 0
+      actionId: 6
     - text: Hamburger
       nextContextId: hamburger
       endsContext: 0
-      actionId: 0
+      actionId: 6
     - text: Energy bar
       nextContextId: energy_bar
+      endsContext: 0
+      actionId: 6
+    - text: Back
+      nextContextId: home
       endsContext: 0
       actionId: 0
     canvasType: 1
   - contextId: backyard
-    contextText: Choice
-    themeImage: {fileID: 0}
+    contextText: Backyard
+    themeImage: {fileID: 21300000, guid: 5ff953ab05deb464c8b5d28fd40ed64c, type: 3}
     options:
     - text: Hamburger
       nextContextId: hamburger
       endsContext: 0
+      actionId: 6
+    - text: Back
+      nextContextId: home
+      endsContext: 0
       actionId: 0
     canvasType: 1
   - contextId: garage
-    contextText: Choice
-    themeImage: {fileID: 0}
+    contextText: Garage
+    themeImage: {fileID: 21300000, guid: 112967449e0bde048aa4a93f44f0cd90, type: 3}
     options:
     - text: Let's go
-      nextContextId: drive1
+      nextContextId: 
+      endsContext: 1
+      actionId: 2
+    - text: Back
+      nextContextId: home
       endsContext: 0
       actionId: 0
     canvasType: 1
   - contextId: gas_station1
-    contextText: Check room
-    themeImage: {fileID: 0}
+    contextText: Gas Station
+    themeImage: {fileID: 21300000, guid: 460618ab64096c142bdf1b5868fbfdba, type: 3}
     options:
     - text: Go
-      nextContextId: drive2
-      endsContext: 0
-      actionId: 0
+      nextContextId: 
+      endsContext: 1
+      actionId: 2
     - text: Refuel
       nextContextId: refuel
       endsContext: 0
-      actionId: 0
+      actionId: 3
     - text: Explore
       nextContextId: explore_gas_station1
-      endsContext: 0
-      actionId: 0
-    - text: Open inventory
-      nextContextId: inventory
       endsContext: 0
       actionId: 0
     - text: Sleep
       nextContextId: sleep
       endsContext: 0
-      actionId: 0
+      actionId: 5
     canvasType: 0
   - contextId: explore_gas_station1
-    contextText: Choice
-    themeImage: {fileID: 0}
+    contextText: Gas Station
+    themeImage: {fileID: 21300000, guid: 460618ab64096c142bdf1b5868fbfdba, type: 3}
     options:
     - text: Back
-      nextContextId: back
+      nextContextId: gas_station1
       endsContext: 0
       actionId: 0
     - text: Canteen
@@ -230,69 +246,61 @@ MonoBehaviour:
     canvasType: 0
   - contextId: canteen1
     contextText: Choice
-    themeImage: {fileID: 0}
+    themeImage: {fileID: 21300000, guid: 32eaaff04ad14b74cbb31323dc24a109, type: 3}
     options:
-    - text: Back
-      nextContextId: back
-      endsContext: 0
-      actionId: 0
     - text: Water Bottle
       nextContextId: water_bottle
       endsContext: 0
-      actionId: 0
+      actionId: 6
     - text: Water Bottle
       nextContextId: water_bottle
       endsContext: 0
-      actionId: 0
+      actionId: 6
     - text: Hamburger
       nextContextId: hamburger
+      endsContext: 0
+      actionId: 6
+    - text: Back
+      nextContextId: explore_gas_station1
       endsContext: 0
       actionId: 0
     canvasType: 1
   - contextId: toilet1
     contextText: Choice
-    themeImage: {fileID: 0}
+    themeImage: {fileID: 21300000, guid: e317faa1f651ba744980070cc1648567, type: 3}
     options:
-    - text: Back
-      nextContextId: back
-      endsContext: 0
-      actionId: 0
-    - text: Crossbow
-      nextContextId: crossbow
-      endsContext: 0
-      actionId: 0
     - text: Candy
       nextContextId: candy
+      endsContext: 0
+      actionId: 6
+    - text: Back
+      nextContextId: explore_gas_station1
       endsContext: 0
       actionId: 0
     canvasType: 1
   - contextId: super_market
-    contextText: Check room
-    themeImage: {fileID: 0}
+    contextText: Supermarket
+    themeImage: {fileID: 21300000, guid: 2825ece0aeca7e547a9b1f1e4282af7b, type: 3}
     options:
     - text: Go
-      nextContextId: drive3
-      endsContext: 0
-      actionId: 0
+      nextContextId: 
+      endsContext: 1
+      actionId: 2
     - text: Explore
       nextContextId: explore_super_market
-      endsContext: 0
-      actionId: 0
-    - text: Open inventory
-      nextContextId: inventory
       endsContext: 0
       actionId: 0
     - text: Sleep
       nextContextId: sleep
       endsContext: 0
-      actionId: 0
-    canvasType: 0
+      actionId: 5
+    canvasType: 1
   - contextId: explore_super_market
-    contextText: Choice
-    themeImage: {fileID: 0}
+    contextText: Supermarket
+    themeImage: {fileID: 21300000, guid: 2825ece0aeca7e547a9b1f1e4282af7b, type: 3}
     options:
     - text: Back
-      nextContextId: back
+      nextContextId: super_market
       endsContext: 0
       actionId: 0
     - text: Food Counter
@@ -307,83 +315,71 @@ MonoBehaviour:
       nextContextId: w/c
       endsContext: 0
       actionId: 0
-    canvasType: 0
+    canvasType: 1
   - contextId: food_counter
-    contextText: Choice
-    themeImage: {fileID: 0}
+    contextText: Food Conuter
+    themeImage: {fileID: 21300000, guid: 3dd03a299fd0a4c43a5723a5d9c2b0f7, type: 3}
     options:
-    - text: Back
-      nextContextId: back
-      endsContext: 0
-      actionId: 0
     - text: Energy Bar
       nextContextId: energy_bar
       endsContext: 0
-      actionId: 0
+      actionId: 6
     - text: Energy Bar
       nextContextId: energy_bar
       endsContext: 0
-      actionId: 0
+      actionId: 6
     - text: Energy Drink
       nextContextId: energy_drink
+      endsContext: 0
+      actionId: 6
+    - text: Back
+      nextContextId: explore_super_market
       endsContext: 0
       actionId: 0
     canvasType: 1
   - contextId: storehouse
-    contextText: Choice
-    themeImage: {fileID: 0}
+    contextText: Storehouse
+    themeImage: {fileID: 21300000, guid: cf66b9b179e75ee4b93ae80b0eaa3ce6, type: 3}
     options:
     - text: Back
-      nextContextId: back
-      endsContext: 0
-      actionId: 0
-    - text: Gun
-      nextContextId: gun
+      nextContextId: explore_super_market
       endsContext: 0
       actionId: 0
     canvasType: 1
   - contextId: w/c
-    contextText: Choice
-    themeImage: {fileID: 0}
+    contextText: WC
+    themeImage: {fileID: 21300000, guid: e317faa1f651ba744980070cc1648567, type: 3}
     options:
     - text: Back
-      nextContextId: back
+      nextContextId: explore_super_market
       endsContext: 0
       actionId: 0
     canvasType: 1
   - contextId: gas_station2
-    contextText: Check room
-    themeImage: {fileID: 0}
+    contextText: Gas Station
+    themeImage: {fileID: 21300000, guid: bb2256cbf953ec14ca1d6ad0ec367b3e, type: 3}
     options:
     - text: Go
-      nextContextId: drive4
-      endsContext: 0
-      actionId: 0
+      nextContextId: 
+      endsContext: 1
+      actionId: 2
     - text: Refuel
       nextContextId: refuel
       endsContext: 0
-      actionId: 0
+      actionId: 3
     - text: Explore
       nextContextId: explore_gas_station2
-      endsContext: 0
-      actionId: 0
-    - text: Open inventory
-      nextContextId: inventory
       endsContext: 0
       actionId: 0
     - text: Sleep
       nextContextId: sleep
       endsContext: 0
-      actionId: 0
+      actionId: 5
     canvasType: 0
   - contextId: explore_gas_station2
-    contextText: Choice
-    themeImage: {fileID: 0}
+    contextText: Gas Station
+    themeImage: {fileID: 21300000, guid: bb2256cbf953ec14ca1d6ad0ec367b3e, type: 3}
     options:
-    - text: Back
-      nextContextId: back
-      endsContext: 0
-      actionId: 0
     - text: Canteen
       nextContextId: canteen2
       endsContext: 0
@@ -392,52 +388,68 @@ MonoBehaviour:
       nextContextId: toilet2
       endsContext: 0
       actionId: 0
-    canvasType: 0
-  - contextId: canteen2
-    contextText: Choice
-    themeImage: {fileID: 0}
-    options:
     - text: Back
-      nextContextId: back
+      nextContextId: gas_station2
       endsContext: 0
       actionId: 0
+    canvasType: 0
+  - contextId: canteen2
+    contextText: Canteen
+    themeImage: {fileID: 21300000, guid: 32eaaff04ad14b74cbb31323dc24a109, type: 3}
+    options:
     - text: Water Bottle
       nextContextId: water_bottle
       endsContext: 0
-      actionId: 0
+      actionId: 6
     - text: Candy
       nextContextId: candy
       endsContext: 0
-      actionId: 0
+      actionId: 6
     - text: Candy
       nextContextId: candy
+      endsContext: 0
+      actionId: 6
+    - text: Back
+      nextContextId: explore_gas_station2
       endsContext: 0
       actionId: 0
     canvasType: 1
   - contextId: toilet2
-    contextText: Choice
-    themeImage: {fileID: 0}
+    contextText: Toilet
+    themeImage: {fileID: 21300000, guid: e317faa1f651ba744980070cc1648567, type: 3}
     options:
     - text: Back
-      nextContextId: back
+      nextContextId: explore_gas_station2
       endsContext: 0
       actionId: 0
     canvasType: 1
   - contextId: ending1
     contextText: Congrate! You made it to the vault.
     themeImage: {fileID: 0}
-    options: []
+    options:
+    - text: Main menu
+      nextContextId: 
+      endsContext: 1
+      actionId: 7
     canvasType: 0
   - contextId: ending2
     contextText: No one was there to greet you.
     themeImage: {fileID: 0}
-    options: []
+    options:
+    - text: Main menu
+      nextContextId: 
+      endsContext: 1
+      actionId: 7
     canvasType: 0
   - contextId: ending3
     contextText: "The steel door creaked open\u2014revealing a dark tunnel with no
       end in sight.\n\nYou stepped inside, not knowing what awaits."
     themeImage: {fileID: 0}
-    options: []
+    options:
+    - text: Main menu
+      nextContextId: 
+      endsContext: 1
+      actionId: 7
     canvasType: 0
   - contextId: ending4
     contextText: 'The door closed behind you, sealing your journey with what felt
@@ -446,5 +458,9 @@ MonoBehaviour:
 
       Hopefully.'
     themeImage: {fileID: 0}
-    options: []
+    options:
+    - text: Main menu
+      nextContextId: 
+      endsContext: 1
+      actionId: 7
     canvasType: 0

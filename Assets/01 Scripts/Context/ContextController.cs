@@ -25,7 +25,6 @@ public class ContextController : MonoBehaviour
         }
 
         Instance = this;
-        DontDestroyOnLoad(this.gameObject);
 
         // Map canvasType to actual GameObjects
         canvasMapTable = new Dictionary<CanvasType, GameObject>
@@ -52,6 +51,7 @@ public class ContextController : MonoBehaviour
         {
             ShowCanvas(ctx.canvasType);
             currentContext = ctx;
+            Debug.Log(ctx.contextId);
             onContextUpdated?.Invoke(ctx);
         }
         else

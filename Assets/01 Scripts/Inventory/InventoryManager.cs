@@ -37,14 +37,14 @@ public class InventoryManager : M_MonoBehaviour
     }
     private void Update()
     {
-        if(InputManager.Instance.IsTabInventory && _menuActivated)
+        if (InputManager.Instance.IsTabInventory && _menuActivated)
         {
             Time.timeScale = 1;
             _inventoryMenu.SetActive(false);
             _playerStatsUI.SetActive(false);
             _menuActivated = false;
         }
-        else if(InputManager.Instance.IsTabInventory && !_menuActivated)
+        else if (InputManager.Instance.IsTabInventory && !_menuActivated)
         {
             Time.timeScale = 0;
             _inventoryMenu.SetActive(true);

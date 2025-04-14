@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -5,6 +6,8 @@ public class GameManager : M_MonoBehaviour
 {
     private static GameManager _instance;
     public static GameManager Instance => _instance;
+
+    private string contextToStart;
 
     protected override void Awake()
     {
@@ -19,6 +22,11 @@ public class GameManager : M_MonoBehaviour
         {
             Destroy(this.gameObject);
         }
+    }
+
+    private void Start()
+    {
+        
     }
 
     public void GameOver()
@@ -41,5 +49,29 @@ public class GameManager : M_MonoBehaviour
     public void MoveToMainMenu()
     {
         SceneManager.LoadScene(CONSTANT.SceneName_MainMenuScene);
+    }
+    public void StartGame()
+    {
+        contextToStart = CONSTANT.ContextID_intro; 
+        SceneManager.sceneLoaded += OnSceneLoaded;
+        SceneManager.LoadScene(CONSTANT.SceneName_ContextScene);
+    }
+
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        if (scene.name == CONSTANT.SceneName_ContextScene && contextToStart != null)
+        {
+            if (ContextController.Instance != null)
+            {
+                ContextController.Instance.StartContext(contextToStart);
+            }
+            else
+            {
+                Debug.LogWarning("ContextController not found after scene load.");
+            }
+
+            contextToStart = null;
+            SceneManager.sceneLoaded -= OnSceneLoaded;
+        }
     }
 }

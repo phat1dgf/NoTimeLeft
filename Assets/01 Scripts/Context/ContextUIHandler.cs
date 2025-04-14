@@ -1,35 +1,38 @@
 ﻿using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using static ContextData;
 
 public class ContextUIHandler : MonoBehaviour
 {
     [Header("UI Components")]
-    public TextMeshProUGUI contextTextUI;
+    public TMP_Text contextTextUI;
     public Image contextImageUI;
     public Transform optionsParent;
     public GameObject optionButtonPrefab;
 
+    [Header("This Canvas Type")]
+    public CanvasType canvasType; 
     private void OnEnable()
     {
+       
         if (ContextController.Instance != null)
             ContextController.Instance.RegisterListener(DisplayContext);
     }
 
-    private void OnDisable()
-    {
-        if (ContextController.Instance != null)
-            ContextController.Instance.UnregisterListener(DisplayContext);
-    }
+    //private void OnDisable()
+    //{
+    //    if (ContextController.Instance != null)
+    //        ContextController.Instance.UnregisterListener(DisplayContext);
+    //}
 
     void DisplayContext(Context context)
     {
-        // UI đang không active -> bỏ qua (ví dụ canvas này không dành cho context hiện tại)
-        if (!this.gameObject.activeInHierarchy)
-            return;
-
+        
+        Debug.Log(contextTextUI.text);
         contextTextUI.text = context.contextText;
         contextImageUI.sprite = context.themeImage;
+        Debug.Log(contextTextUI.text);
 
         foreach (Transform child in optionsParent)
             Destroy(child.gameObject);

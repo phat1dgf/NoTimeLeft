@@ -17,15 +17,8 @@ public class ContextManager : MonoBehaviour
         }
 
         Instance = this;
-        DontDestroyOnLoad(this.gameObject);
         LoadDatabase();
     }
-
-    void Start()
-    {
-        FindObjectOfType<ContextController>().StartContext("intro");
-    }
-
 
     private void LoadDatabase()
     {
@@ -68,16 +61,12 @@ public class ContextManager : MonoBehaviour
     {
         return actionId switch
         {
-            ActionID.Damage10 => () =>
-            {
-                // tăng 10 dame cho player
-            },
-            ActionID.LogEscape => () => Debug.Log("Bạn đã trốn thoát."),
-            ActionID.NextContext => () =>
-            {
-                Debug.Log("Chuyển tới context kế");
-            },
-           
+            ActionID.NextContext => () => Debug.Log("Chuyển tới context kế"),
+            ActionID.Drive => () => Debug.Log("Bắt đầu game lái xe"),
+            ActionID.Refuel => () => Debug.Log("Đổ đầy xăng"),
+            ActionID.Sleep => () => Debug.Log("Hồi đầy năng lượng"),
+            ActionID.Take => () => Debug.Log("Lấy vật phảm vào túi"),
+            ActionID.MainMenu => () => Debug.Log("Quay lại menu"),
             _ => null
         };
     }

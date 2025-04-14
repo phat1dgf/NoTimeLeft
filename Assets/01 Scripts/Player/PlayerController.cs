@@ -17,7 +17,6 @@ public class PlayerController : M_MonoBehaviour
         if( _instance == null)
         {
             _instance = this;
-            DontDestroyOnLoad(gameObject);
             return;
         }
         if(_instance.gameObject.GetInstanceID()!= this.gameObject.GetInstanceID())
