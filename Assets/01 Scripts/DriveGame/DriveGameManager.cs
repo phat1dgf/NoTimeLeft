@@ -14,6 +14,34 @@ public class DriveGameManager : M_MonoBehaviour
 
     Coroutine _obstacleSpawnCoroutine;
 
+    [SerializeField] private float _timer;
+    [SerializeField] private float _roundTime;
+
+    protected override void Reset()
+    {
+        base.Reset();
+        _roundTime = 60;
+        _timer = _roundTime;
+    }
+    private void Update()
+    {
+        CountdownTime();
+    }
+    private void CountdownTime()
+    {
+        if (_timer > 0f)
+        {
+            _timer -= Time.deltaTime;
+
+            if (_timer <= 0f)
+            {
+                _timer = 0f;
+                GameManager.Instance.MoveToContextGame();
+                _timer = _roundTime;
+            }
+        }
+    }
+
     protected override void Awake()
     {
         base.Awake();
@@ -22,7 +50,7 @@ public class DriveGameManager : M_MonoBehaviour
             _instance = this;
             return;
         }
-        if(_instance.gameObject.GetInstanceID() == this.gameObject.GetInstanceID())
+        if(_instance.gameObject.GetInstanceID() != this.gameObject.GetInstanceID())
         {
             Destroy(this.gameObject);
         }
@@ -50,7 +78,7 @@ public class DriveGameManager : M_MonoBehaviour
     {
         while (true)
         {
-            float spawnTimer = Random.Range(4f, 7f);
+            float spawnTimer = Random.Range(2f, 5f);
             yield return new WaitForSeconds(spawnTimer);
 
             float[] possibleY =

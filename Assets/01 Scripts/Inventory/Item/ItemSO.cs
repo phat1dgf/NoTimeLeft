@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-[CreateAssetMenu(fileName = "ContextDatabase", menuName = "Game/ItemSO")]
+[CreateAssetMenu(fileName = "ItemData", menuName = "Game/ItemSO")]
 public class ItemSO : ScriptableObject
 {
     public string itemName;
@@ -10,7 +10,7 @@ public class ItemSO : ScriptableObject
 
     public bool UseItem()
     {
-        PlayerStats playerStats = PlayerStats.Instance;
+        PlayerStats playerStats = PlayerController.Instance.PlayerStats;
 
         if (stat == StatToChange.Food)
         {

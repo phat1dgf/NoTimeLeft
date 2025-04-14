@@ -5,8 +5,8 @@ using UnityEngine;
 
 public class PlayerStats : M_MonoBehaviour
 {
-    private static PlayerStats _instance;
-    public static PlayerStats Instance => _instance;
+    //private static PlayerStats _instance;
+    //public static PlayerStats Instance => _instance;
 
     [SerializeField] private int _food;
     public int Food => _food;
@@ -22,21 +22,27 @@ public class PlayerStats : M_MonoBehaviour
     [SerializeField] private int _maxFuel;
     public float MaxFuel => _maxFuel;
 
-    protected override void Awake()
-    {
-        base.Awake();
-        if (_instance == null)
-        {
-            _instance = this;
-            DontDestroyOnLoad(this.gameObject);
-            return;
-        }
-        if(_instance.gameObject.GetInstanceID() == this.gameObject.GetInstanceID())
-        {
-            Destroy(this.gameObject);
-        }
-    }
+    //protected override void Awake()
+    //{
+    //    base.Awake();
+    //    //if (_instance == null)
+    //    //{
+    //    //    _instance = this;
+    //    //    DontDestroyOnLoad(this.gameObject);
+    //    //    return;
+    //    //}
+    //    //if(_instance.gameObject.GetInstanceID() != this.gameObject.GetInstanceID())
+    //    //{
+    //    //    Destroy(this.gameObject);
+    //    //}
+    //}
 
+    private void Start()
+    {
+        _food = 2;
+        _energy = 2;
+        _fuel = 2;
+    }
     protected override void Reset()
     {
         base.Reset();
@@ -64,14 +70,29 @@ public class PlayerStats : M_MonoBehaviour
 
     public void AddFood(int food)
     {
+        if(_food + food >= _maxFood)
+        {
+            _food = _maxFood;
+            return;
+        }
         this._food += food;
     }
     public void AddEnergy(int energy)
     {
+        if (_energy + energy >= _maxEnergy)
+        {
+            _energy = _maxEnergy;
+            return;
+        }
         this._energy += energy;
     }
     public void AddFuel(int fuel)
     {
+        if (_fuel + fuel >= _maxFuel)
+        {
+            _fuel = _maxFuel;
+            return;
+        }
         this._fuel += fuel;
     }
 }
