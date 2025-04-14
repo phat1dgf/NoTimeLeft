@@ -63,6 +63,10 @@ public class PlayerStats : M_MonoBehaviour
         }
         this._food += food;
     }
+    public void ReduceFood(int food)
+    {
+        this._food -= food;
+    }
     public void AddEnergy(int energy)
     {
         if (_energy + energy >= _maxEnergy)
@@ -72,6 +76,10 @@ public class PlayerStats : M_MonoBehaviour
         }
         this._energy += energy;
     }
+    public void ReduceEnergy(int energy)
+    {
+        this._energy -= energy;
+    }
     public void AddFuel(int fuel)
     {
         if (_fuel + fuel >= _maxFuel)
@@ -80,5 +88,9 @@ public class PlayerStats : M_MonoBehaviour
             return;
         }
         this._fuel += fuel;
+    }
+    public void ReduceFuel(int fuel)
+    {
+        this._fuel -= fuel;
     }
 }

@@ -3,10 +3,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerController : M_MonoBehaviour
+public class playerController : M_MonoBehaviour
 {
-    private static PlayerController _instance;
-    public static PlayerController Instance => _instance;
+    private static playerController _instance;
+    public static playerController Instance => _instance;
 
     [SerializeField] private PlayerStats _playerStats;
     public PlayerStats PlayerStats => _playerStats;

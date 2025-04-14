@@ -9,6 +9,9 @@ public class GameManager : M_MonoBehaviour
 
     private string contextToStart;
 
+    [SerializeField] private int countdownToDie;
+    public int CountdownToDie => countdownToDie;
+
     protected override void Awake()
     {
         base.Awake();
@@ -24,9 +27,18 @@ public class GameManager : M_MonoBehaviour
         }
     }
 
-    private void Start()
+    protected override void Reset()
     {
-        
+        base.Reset();
+        countdownToDie = 72;
+    }
+
+    private void Update()
+    {
+        if(countdownToDie < 0)
+        {
+            GameOver();
+        }
     }
 
     public void GameOver()
@@ -73,5 +85,20 @@ public class GameManager : M_MonoBehaviour
             contextToStart = null;
             SceneManager.sceneLoaded -= OnSceneLoaded;
         }
+    }
+
+    public void Sleep()
+    {
+        countdownToDie -= 6;
+    }
+
+    public void Refuel()
+    {
+        countdownToDie -= 4;
+    }
+
+    public void Drive(int hour)
+    {
+        countdownToDie -= hour; 
     }
 }

@@ -90,11 +90,28 @@ public class ItemSlot : M_MonoBehaviour, IPointerClickHandler
 
     private void EmptySlot()
     {
+        _itemName = "";
+        _quantity = 0;
+        _itemSprite = null;
+        _itemDescription = "";
+
         quantityText.enabled = false;
         itemImage.sprite = blankSprite;
 
         itemDescriptionNameText.text = "";
         itemDescriptionText.text = "";
         itemDescriptionImage.sprite = blankSprite;
+
+        selectedShader.SetActive(false);
+        isItemSelected = false;
     }
+
+
+    public void UpdateSlotUI()
+    {
+        quantityText.text = _quantity.ToString();
+        quantityText.enabled = _quantity > 0;
+        itemImage.sprite = _quantity > 0 ? _itemSprite : blankSprite;
+    }
+
 }

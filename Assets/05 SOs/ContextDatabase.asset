@@ -59,7 +59,7 @@ MonoBehaviour:
     canvasType: 0
   - contextId: intro4
     contextText: "\u201CThis is Vault 104. We\u2019ve got food, safety, and no zombies.
-      Evac closes in 7 days. Get here or get eaten. Over.\u201D"
+      Evac closes in 3 days. Get here or get eaten. Over.\u201D"
     themeImage: {fileID: 21300000, guid: 7e864accb2ee4cc418149fceec07270c, type: 3}
     options:
     - text: ...
@@ -197,10 +197,10 @@ MonoBehaviour:
     contextText: Garage
     themeImage: {fileID: 21300000, guid: 112967449e0bde048aa4a93f44f0cd90, type: 3}
     options:
-    - text: Let's go
+    - text: Go (-3h, -2 Food, -1 Energy, -2 Fuel)
       nextContextId: 
       endsContext: 1
-      actionId: 1
+      actionId: 13
     - text: Back
       nextContextId: home
       endsContext: 0
@@ -210,10 +210,10 @@ MonoBehaviour:
     contextText: Gas Station
     themeImage: {fileID: 21300000, guid: 460618ab64096c142bdf1b5868fbfdba, type: 3}
     options:
-    - text: Go
+    - text: Go (-6h, -5 Food, -4 Energy, -6 Fuel)
       nextContextId: 
       endsContext: 1
-      actionId: 1
+      actionId: 14
     - text: Refuel
       nextContextId: 
       endsContext: 0
@@ -278,10 +278,10 @@ MonoBehaviour:
     contextText: Supermarket
     themeImage: {fileID: 21300000, guid: 2825ece0aeca7e547a9b1f1e4282af7b, type: 3}
     options:
-    - text: Go
+    - text: Go (-4h, -4 Food, -3 Energy, -3 Fuel)
       nextContextId: 
       endsContext: 1
-      actionId: 1
+      actionId: 15
     - text: Explore
       nextContextId: explore_super_market
       endsContext: 0
@@ -355,10 +355,10 @@ MonoBehaviour:
     contextText: Gas Station
     themeImage: {fileID: 21300000, guid: bb2256cbf953ec14ca1d6ad0ec367b3e, type: 3}
     options:
-    - text: Go
+    - text: Go (-3h, -3 Food, -3 Energy, -2 Fuel)
       nextContextId: 
       endsContext: 1
-      actionId: 1
+      actionId: 16
     - text: Refuel
       nextContextId: refuel
       endsContext: 0
@@ -421,7 +421,7 @@ MonoBehaviour:
     canvasType: 1
   - contextId: ending1
     contextText: Congrate! You made it to the vault.
-    themeImage: {fileID: 0}
+    themeImage: {fileID: 21300000, guid: e38208d481285a240a3cd219eaa0221d, type: 3}
     options:
     - text: Main menu
       nextContextId: 

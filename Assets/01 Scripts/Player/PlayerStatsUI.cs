@@ -18,7 +18,7 @@ public class PlayerStatsUI : M_MonoBehaviour
 
     private void LoadPlayerStats()
     {
-        playerStats = PlayerController.Instance.PlayerStats;
+        playerStats = playerController.Instance.PlayerStats;
     }
 
     private void Update()

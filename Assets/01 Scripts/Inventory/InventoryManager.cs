@@ -69,11 +69,27 @@ public class InventoryManager : M_MonoBehaviour
 
     public void AddItem(string itemName, int quantity, Sprite itemSprite, string itemDescription)
     {
-        for(int i = 0; i < itemSlot.Length; i++)
+        for (int i = 0; i < itemSlot.Length; i++)
         {
-            itemSlot[i].AddItem(itemName, quantity, itemSprite, itemDescription);
+            if (itemSlot[i]._itemName == itemName && itemSlot[i]._quantity > 0)
+            {
+                itemSlot[i]._quantity += quantity;
+                itemSlot[i].UpdateSlotUI();
+                return;
+            }
+        }
+
+        for (int i = 0; i < itemSlot.Length; i++)
+        {
+            if (itemSlot[i]._quantity <= 0)
+            {
+                itemSlot[i].AddItem(itemName, quantity, itemSprite, itemDescription);
+                return;
+            }
         }
     }
+
+
     public void DeselectAllSlots()
     {
         for (int i = 0; i < itemSlot.Length; i++)

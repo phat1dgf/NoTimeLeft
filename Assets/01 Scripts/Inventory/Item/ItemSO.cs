@@ -7,10 +7,11 @@ public class ItemSO : ScriptableObject
     public string itemName;
     public StatToChange stat = new StatToChange();
     public int amountToChangeStat;
+    public Sprite sprite;
 
     public bool UseItem()
     {
-        PlayerStats playerStats = PlayerController.Instance.PlayerStats;
+        PlayerStats playerStats = playerController.Instance.PlayerStats;
 
         if (stat == StatToChange.Food)
         {

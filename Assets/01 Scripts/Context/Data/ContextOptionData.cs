@@ -11,10 +11,20 @@ public class ContextOptionData
 public enum ActionID
 {
     NextContext,
-    Drive, 
+    Drive,
     Refuel,
     Inventory,
     Sleep,
     Take,
     MainMenu,
+    AddItem_Bottle,
+    AddItem_Candy,
+    AddItem_ChocoBar,
+    AddItem_Cigar,
+    AddItem_EnergyDrink,
+    AddItem_Hamburger,
+    Drive1,
+    Drive2,
+    Drive3,
+    Drive4,
 }
