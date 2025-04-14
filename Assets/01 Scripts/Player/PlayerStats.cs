@@ -10,10 +10,17 @@ public class PlayerStats : M_MonoBehaviour
 
     [SerializeField] private int _food;
     public int Food => _food;
+    [SerializeField] private int _maxFood;
+    public int MaxFood => _maxFood;
     [SerializeField] private int _energy;
     public int Energy => _energy;
+
+    [SerializeField] private int _maxEnergy;
+    public int MaxEnergy => _maxEnergy;
     [SerializeField] private int _fuel;
     public int Fuel => _fuel;
+    [SerializeField] private int _maxFuel;
+    public float MaxFuel => _maxFuel;
 
     protected override void Awake()
     {
@@ -28,6 +35,14 @@ public class PlayerStats : M_MonoBehaviour
         {
             Destroy(this.gameObject);
         }
+    }
+
+    protected override void Reset()
+    {
+        base.Reset();
+        _maxEnergy = 10;
+        _maxFood = 10;
+        _maxFuel = 10;
     }
 
     private void Update()

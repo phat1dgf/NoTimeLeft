@@ -58,15 +58,43 @@ public class ItemSlot : M_MonoBehaviour, IPointerClickHandler
 
     private void OnLeftClick()
     {
-        InventoryManager.Instance.DeselectAllSlots();
-        selectedShader.SetActive(true);
-        isItemSelected = true;
-        itemDescriptionNameText.text = _itemName;
-        itemDescriptionText.text = _itemDescription;
-        itemDescriptionImage.sprite = _itemSprite;
-        if(itemDescriptionImage.sprite == null)
+        if (isItemSelected)
         {
-            itemDescriptionImage.sprite = blankSprite;
+            bool usable = InventoryManager.Instance.UseItem(_itemName);
+            if (usable)
+            {
+                this._quantity -= 1;
+                quantityText.text = _quantity.ToString();
+                if (this._quantity <= 0)
+                {
+                    EmptySlot();
+                }
+            }
+
         }
+        else
+        {
+            InventoryManager.Instance.DeselectAllSlots();
+            selectedShader.SetActive(true);
+            isItemSelected = true;
+            itemDescriptionNameText.text = _itemName;
+            itemDescriptionText.text = _itemDescription;
+            itemDescriptionImage.sprite = _itemSprite;
+            if(itemDescriptionImage.sprite == null)
+            {
+                itemDescriptionImage.sprite = blankSprite;
+            }
+        }
+        
+    }
+
+    private void EmptySlot()
+    {
+        quantityText.enabled = false;
+        itemImage.sprite = blankSprite;
+
+        itemDescriptionNameText.text = "";
+        itemDescriptionText.text = "";
+        itemDescriptionImage.sprite = blankSprite;
     }
 }

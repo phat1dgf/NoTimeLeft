@@ -13,6 +13,7 @@ public class InventoryManager : M_MonoBehaviour
     [SerializeField] private bool _menuActivated;
 
     public ItemSlot[] itemSlot;
+    public ItemSO[] itemSOs;
 
     protected override void Awake()
     {
@@ -51,12 +52,26 @@ public class InventoryManager : M_MonoBehaviour
             _menuActivated = true;
         }
     }
+
+    public bool UseItem(string itemName)
+    {
+        for(int i = 0; i < itemSOs.Length; i++)
+        {
+            if (itemSOs[i].itemName == itemName)
+            {
+                bool usable = itemSOs[i].UseItem();
+                return usable;
+            } 
+        }
+        return false;
+
+    }
+
     public void AddItem(string itemName, int quantity, Sprite itemSprite, string itemDescription)
     {
         for(int i = 0; i < itemSlot.Length; i++)
         {
             itemSlot[i].AddItem(itemName, quantity, itemSprite, itemDescription);
-            return;
         }
     }
     public void DeselectAllSlots()
